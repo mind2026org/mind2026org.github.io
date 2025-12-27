@@ -36,7 +36,8 @@
 .nTitle1 {
   font-weight: 700;
   font-size: 50px;
-  color: #18449C;
+  /* color: #18449C; */
+  color: #2B79CF;
 }
 .nTitle2 {
   margin-top: 30px;
@@ -87,7 +88,8 @@
 .aboutTitle2 {
   font-weight: 700;
   font-size: 46px;
-  color: #18449C;
+  /* color: #18449C; */
+  color: #2B79CF;
   margin-left: 15px;
 }
 
@@ -531,7 +533,8 @@
   .mnTitle1 {
     font-weight: 700;
     font-size: 6.667rem;
-    color: #18449C;
+    /* color: #18449C; */
+    color: #2B79CF;
     text-align: center;
   }
   .mnTitle2 {
