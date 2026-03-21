@@ -1,0 +1,417 @@
+
+<style>
+  /* Adjust the page width just for this page alone. */
+  .container-md {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  /* 强制subtitle中的大写字母加粗 */
+  .intro-header .page-heading .page-subheading .bold-letter {
+    font-weight: 600 !important;
+    font-family: var(--header-font) !important;
+  }
+
+  /* 照片轮播样式 */
+  .photo-carousel-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* 🔧 新增：初始隐藏，防止闪烁 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .photo-carousel-container.loaded {
+    opacity: 1;
+  }
+
+  .photo-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* 🔧 新增：初始状态防止显示异常 */
+    transform: translateX(0);
+  }
+
+  .carousel-slide {
+    flex-shrink: 0;
+    position: relative;
+    /* width将由JavaScript动态设置 */
+  }
+
+  .carousel-slide img {
+    width: 100%;
+    height: 600px; /* 🔧 修改这里来调整图像高度 */
+    object-fit: cover;
+    display: block;
+  }
+
+  .carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: white;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .carousel-caption h4 {
+    margin: 0 0 8px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .carousel-caption p {
+    margin: 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+
+  /* 导航点 */
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .dot.active {
+    background-color: #007bff;
+  }
+
+  .dot:hover {
+    background-color: #0056b3;
+  }
+
+  /* 左右箭头 */
+  .carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    z-index: 10;
+    outline: none !important; /* 强制移除焦点轮廓 */
+  }
+
+  .carousel-nav:hover,
+  .carousel-nav:focus {
+    background: rgba(0, 0, 0, 0.8);
+    outline: none !important;
+  }
+
+  .carousel-nav:active {
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  .carousel-nav.prev {
+    left: 15px;
+  }
+
+  .carousel-nav.next {
+    right: 15px;
+  }
+
+  /* 响应式设计 */
+  @media (max-width: 768px) {
+    .photo-carousel-container {
+      margin: 20px 10px;
+    }
+    
+    .carousel-slide img {
+      height: 250px;
+    }
+    
+    .carousel-caption h4 {
+      font-size: 1rem;
+    }
+    
+    .carousel-caption p {
+      font-size: 0.8rem;
+    }
+    
+    .carousel-nav {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+      outline: none !important; /* 在小屏幕上也移除焦点轮廓 */
+    }
+  }
+</style>
+
+<!-- 照片轮播 -->
+<div class="photo-carousel-container">
+  <div class="photo-carousel" id="photoCarousel">
+    <!-- 1 -->
+    <div class="carousel-slide">
+     <!-- <img src="/assets/img/lab_photos/Ngong_Ping_Group_Photo.jpg" alt="Lab Photo 1"> -->
+      <img src="mind26images/all1.jpg" alt="Lab Photo 1">
+      <div class="carousel-caption">
+        <!-- <p>test 1</p> -->
+      </div>
+    </div>
+        <!-- 2 -->
+    <div class="carousel-slide">
+     <!-- <img src="/assets/img/lab_photos/Ngong_Ping_Group_Photo.jpg" alt="Lab Photo 1"> -->
+      <img src="mind26images/all2.jpg" alt="Lab Photo 1">
+      <div class="carousel-caption">
+        <!-- <p>test 1</p> -->
+      </div>
+    </div>
+        <!-- 3 -->
+    <div class="carousel-slide">
+     <!-- <img src="/assets/img/lab_photos/Ngong_Ping_Group_Photo.jpg" alt="Lab Photo 1"> -->
+      <img src="mind26images/all3.jpg" alt="Lab Photo 1">
+      <div class="carousel-caption">
+        <!-- <p>test 1</p> -->
+      </div>
+    </div>
+        <!-- 4 -->
+    <div class="carousel-slide">
+     <!-- <img src="/assets/img/lab_photos/Ngong_Ping_Group_Photo.jpg" alt="Lab Photo 1"> -->
+      <img src="mind26images/all4.jpg" alt="Lab Photo 1">
+      <div class="carousel-caption">
+        <!-- <p>test 1</p> -->
+      </div>
+    </div>
+        <!-- 5 -->
+    <div class="carousel-slide">
+     <!-- <img src="/assets/img/lab_photos/Ngong_Ping_Group_Photo.jpg" alt="Lab Photo 1"> -->
+      <img src="mind26images/all5.jpg" alt="Lab Photo 1">
+      <div class="carousel-caption">
+        <!-- <p>test 1</p> -->
+      </div>
+    </div>
+        <!-- 6 -->
+    <div class="carousel-slide">
+     <!-- <img src="/assets/img/lab_photos/Ngong_Ping_Group_Photo.jpg" alt="Lab Photo 1"> -->
+      <img src="mind26images/all6.jpg" alt="Lab Photo 1">
+      <div class="carousel-caption">
+        <!-- <p>test 1</p> -->
+      </div>
+    </div>
+    <!--
+    <div class="carousel-slide">
+      <img src="/assets/img/lab_photos/new_photo.jpg" alt="Lab Photo 4">
+      <div class="carousel-caption">
+        <p>新照片描述</p>
+      </div>
+    </div>
+    -->
+  </div>
+
+  
+  <!-- 左右导航箭头 -->
+  <button class="carousel-nav prev" onclick="changeSlide(-1)">❮</button>
+  <button class="carousel-nav next" onclick="changeSlide(1)">❯</button>
+</div>
+
+<!-- 导航点容器 - 将由JavaScript动态生成 -->
+<div class="carousel-dots" id="carouselDots">
+</div>
+
+<script>
+let currentSlideIndex = 0;
+let autoSlideInterval;
+let totalSlides = 0;
+let slides = [];
+let dots = [];
+let lastSlideTime = 0;
+let isTransitioning = false;
+
+const AUTO_SLIDE_INTERVAL = 3000;
+
+function boldCapitalLetters() {
+  const subtitleElement = document.querySelector('.intro-header .page-heading .page-subheading');
+  
+  if (subtitleElement) {
+    const originalText = subtitleElement.textContent;
+    const boldedText = originalText
+      .replace(/\(([^)]+)\)/g, '(<span class="bold-letter">$1</span>)')
+      .replace(/([A-Z])(?![^<]*>)/g, '<span class="bold-letter">$1</span>');
+    
+    subtitleElement.innerHTML = boldedText;
+  }
+}
+
+// 🔧 修改：初始化轮播，先隐藏再设置
+function initCarousel() {
+  const carousel = document.getElementById('photoCarousel');
+  const carouselContainer = document.querySelector('.photo-carousel-container');
+  
+  // 获取原始幻灯片
+  const originalSlides = document.querySelectorAll('.carousel-slide');
+  totalSlides = originalSlides.length;
+  
+  // 🔧 关键修改：创建第一张图片的克隆并添加到末尾
+  const firstSlideClone = originalSlides[0].cloneNode(true);
+  carousel.appendChild(firstSlideClone);
+  
+  // 重新获取所有幻灯片（包括克隆的）
+  slides = document.querySelectorAll('.carousel-slide');
+  const extendedTotalSlides = slides.length;
+  
+  // 设置轮播容器总宽度（包括克隆的图片）
+  carousel.style.width = `${extendedTotalSlides * 100}%`;
+  
+  // 设置每张图片的宽度
+  const slideWidth = 100 / extendedTotalSlides;
+  slides.forEach(slide => {
+    slide.style.width = `${slideWidth}%`;
+  });
+  
+  // 🔧 新增：设置初始位置（显示第一张图片）
+  currentSlideIndex = 0;
+  carousel.style.transform = `translateX(0%)`;
+  
+  // 动态生成导航点
+  generateDots();
+  
+  // 🔧 新增：设置完成后显示轮播
+  setTimeout(() => {
+    carouselContainer.classList.add('loaded');
+  }, 100);
+}
+
+// 动态生成导航点
+function generateDots() {
+  const dotsContainer = document.getElementById('carouselDots');
+  dotsContainer.innerHTML = '';
+  
+  for (let i = 0; i < totalSlides; i++) {
+    const dot = document.createElement('span');
+    dot.className = 'dot';
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => currentSlide(i + 1);
+    dotsContainer.appendChild(dot);
+  }
+  
+  dots = document.querySelectorAll('.dot');
+}
+
+// 🔧 修改：显示指定的幻灯片，支持无缝循环
+function showSlide(index) {
+  if (isTransitioning) return;
+  
+  const carousel = document.getElementById('photoCarousel');
+  const extendedTotalSlides = slides.length;
+  const slideWidth = 100 / extendedTotalSlides;
+  
+  if (index >= totalSlides) {
+    currentSlideIndex = totalSlides;
+  } else if (index < 0) {
+    currentSlideIndex = totalSlides - 1;
+  } else {
+    currentSlideIndex = index;
+  }
+  
+  const translateX = -currentSlideIndex * slideWidth;
+  carousel.style.transform = `translateX(${translateX}%)`;
+  
+  if (currentSlideIndex === totalSlides) {
+    isTransitioning = true;
+    
+    const handleTransitionEnd = () => {
+      carousel.style.transition = 'none';
+      currentSlideIndex = 0;
+      const newTranslateX = -currentSlideIndex * slideWidth;
+      carousel.style.transform = `translateX(${newTranslateX}%)`;
+      
+      carousel.offsetHeight;
+      carousel.style.transition = 'transform 0.5s ease-in-out';
+      
+      isTransitioning = false;
+      carousel.removeEventListener('transitionend', handleTransitionEnd);
+    };
+    
+    carousel.addEventListener('transitionend', handleTransitionEnd);
+  }
+  
+  const realIndex = currentSlideIndex >= totalSlides ? 0 : currentSlideIndex;
+  dots.forEach((dot, i) => {
+    dot.classList.toggle('active', i === realIndex);
+  });
+  
+  lastSlideTime = Date.now();
+}
+
+// 修改：手动切换函数
+function changeSlide(direction) {
+  if (isTransitioning) return;
+  showSlide(currentSlideIndex + direction);
+  startAutoSlide();
+}
+
+// 修改：跳转函数
+function currentSlide(index) {
+  if (isTransitioning) return;
+  showSlide(index - 1);
+  startAutoSlide();
+}
+
+// 自动播放函数
+function startAutoSlide() {
+  clearInterval(autoSlideInterval);
+  
+  autoSlideInterval = setInterval(() => {
+    if (!isTransitioning) {
+      showSlide(currentSlideIndex + 1);
+    }
+  }, AUTO_SLIDE_INTERVAL);
+}
+
+// 页面加载完成后初始化
+document.addEventListener('DOMContentLoaded', function() {
+  boldCapitalLetters();
+  initCarousel();
+  startAutoSlide();
+  
+  const carouselContainer = document.querySelector('.photo-carousel-container');
+  
+  carouselContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoSlideInterval);
+  });
+  
+  carouselContainer.addEventListener('mouseleave', () => {
+    startAutoSlide();
+  });
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowLeft') {
+    changeSlide(-1);
+  } else if (event.key === 'ArrowRight') {
+    changeSlide(1);
+  }
+});
+</script>
