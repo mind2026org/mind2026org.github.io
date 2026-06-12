@@ -17,6 +17,48 @@
       <link rel="stylesheet" type="text/css" href="./css/layui.css" />
       <link rel="stylesheet" type="text/css" href="./css/common.css" />
       <link rel="stylesheet" type="text/css" href="./css/contact.css" />
+      <style>
+        .special-call-title {
+          font-weight: 700;
+          font-size: 26px;
+          color: #333333;
+          margin: 0 0 20px;
+        }
+
+        .special-guidance-title {
+          font-size: 22px;
+          color: #333333;
+          letter-spacing: 0;
+          line-height: 30px;
+          margin-top: 26px;
+        }
+
+        .special-guidance-content {
+          font-size: 22px;
+          color: #333333;
+          letter-spacing: 0;
+          line-height: 30px;
+        }
+
+        @media screen and (max-width: 750px) {
+          .special-call-title {
+            font-size: 4rem;
+            margin-bottom: 2.667rem;
+          }
+
+          .special-guidance-title {
+            font-size: 3.467rem;
+            line-height: 4rem;
+            margin-top: 3.467rem;
+          }
+
+          .special-guidance-content {
+            font-size: 3.467rem;
+            line-height: 4rem;
+            word-break: break-all;
+          }
+        }
+      </style>
   </head>
   <body>
   <div class="pages">
@@ -32,8 +74,13 @@
       <li class="layui-nav-item"><a href="committee.html">Committee</a></li>
       <li class="layui-nav-item"><a href="javascript:;">Calls</a>
         <dl class="layui-nav-child">
-          <dd><a href="call-for-submissions.html">Call for Papers</a></dd>
-		  <dd><a href="call-for-special-session.html">Call for Special Sessions</a></dd>
+          <dd class="threeNav">
+            <a href="javascript:;">Call for Papers</a>
+            <dl class="layui-nav-child threeNavWrap">
+              <dd><a href="call-for-submissions.html">Main Track</a></dd>
+              <dd><a href="call-for-special-session.html">Special Paper Sessions</a></dd>
+            </dl>
+          </dd>
           <!-- <dd><a href="author-submissions.html">Author Submissions</a></dd><dd><a href="camera-ready-guideline.html">Camera Ready Guideline</a></dd> -->
         </dl>
       </li>
@@ -53,11 +100,356 @@
       <img src="./images/mobile/close.png" class="close none" />
     </div>
     <div class="commonTitle">
-      Call for Special Sessions
+      Special Paper Sessions
     </div>
     <div class="cContent">
       <div class="cWrap">
-        <div><span class="blod">MIND</span> invites proposals for Special Sessions that explore timely and specialized topics <span class="blod">within the scope of Machine Intelligence and Nature-inspired Computing.</span> 
+        <div class="special-call-title">
+          Call for Papers
+        </div>
+        <div><span class="blod">MIND</span> invites proposals for Special Sessions that explore timely and specialized topics <span class="blod">within the scope of Machine Intelligence and Nature-inspired Computing. </span> The Special Paper Sessions collectively outline a broad and evolving landscape of intelligent computing, spanning learning and optimization, brain-inspired systems, neuromorphic devices, multimodal perception, brain-computer interfaces, and real-world intelligent applications. Together, these sessions reflect the diversity of current research frontiers and the growing connections among models, algorithms, hardware, data, and deployment scenarios. They are intended to present a structured overview of focused topics that complement the main track while emphasizing the breadth and future direction of the MIND community.
+        </div>
+        <div class="telTitle">
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-1: AI for Electronic Design Automation: Intelligent Placement and Routing, Physical Design Optimization, and Agentic EDA Systems (Co-Chairs: Jing Liu, Shibing Mo)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> The rapid progress of artificial intelligence, machine learning, large language models, and autonomous agents is creating new opportunities for Electronic Design Automation, especially in complex digital circuit back-end design. As modern integrated circuits continue to scale in complexity, traditional EDA flows face increasing challenges in design-space exploration, placement, routing, timing closure, power optimization, physical verification, and manufacturability-aware optimization. This Special Session aims to explore emerging research at the intersection of Machine Intelligence, Nature-inspired Computing, and Electronic Design Automation, with a particular focus on AI-driven methods for digital circuit physical design and intelligent EDA agents. The session will provide a platform for researchers from academia and industry to discuss how learning-based algorithms, evolutionary computation, reinforcement learning, graph neural networks, large language models, and multi-agent systems can be applied to automate and improve key stages of the EDA workflow. The proposed session will cover both algorithmic advances and practical EDA applications, including intelligent placement and routing, layout optimization, timing and congestion prediction, chip design automation agents, and human-AI collaborative EDA environments.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> The session welcomes original research, case studies, surveys, and practical demonstrations related to AI-driven EDA and intelligent back-end digital design. Topics of interest include, but are not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Intelligent Placement and Routing Algorithms.</span> Learning-based, evolutionary, swarm-intelligence, reinforcement-learning, or hybrid algorithms for placement generation, global routing, detailed routing, and congestion optimization.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Graph Learning for Circuit and Layout Representation.</span> Graph neural networks and representation learning methods for netlists, timing graphs, placement graphs, and layout structures.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Reinforcement Learning and Nature-inspired Optimization for EDA.</span> Applications of reinforcement learning, genetic algorithms, ant colony optimization, particle swarm optimization, simulated annealing, and other heuristic or metaheuristic methods in EDA workflows.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Large Language Models for EDA.</span> LLM-based methods for EDA script generation, Verilog/VHDL analysis, tool command automation, design debugging, documentation, and engineer-assistant systems.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Agentic EDA Systems.</span> Autonomous or semi-autonomous EDA agents capable of planning, tool invocation, iterative optimization, design diagnosis, and human-in-the-loop collaboration.</li>
+              </ul>
+              <div><span class="blod">Contact Email:</span> <a href="http://23171214492@stu.xidian.edu.cn" target="_blank" style="color: #2B79CF;">23171214492@stu.xidian.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-2: Evolutionary Dynamic Optimization and Machine Learning (Co-Chairs: Zhenzhong Wang, Huan Zhang, Cuie Yang, Min Jiang)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> Dynamic multiobjective optimization problems (DMOPs) arise in a wide range of real-world systems where objectives, constraints, decision variables, and environmental conditions change over time. Representative examples include intelligent manufacturing, autonomous systems, transportation and logistics, smart grids, communication networks, digital twins, and adaptive resource management. In such scenarios, optimization is no longer a static one-shot task, but a continuous decision-making process that must rapidly adapt to uncertainty, nonstationarity, conflicting objectives, and limited computational budgets.
+              </div>
+              <div style="margin-bottom: 16px;">
+                This Special Session aims to bring together researchers and practitioners working on theories, algorithms, and applications of dynamic multiobjective optimization. The session will provide a focused forum for discussing recent advances in dynamic Pareto optimization, change detection and response strategies, prediction-assisted search, memory-based and transfer-learning mechanisms, surrogate-assisted optimization, evolutionary dynamic optimization, reinforcement learning for adaptive decision-making, and benchmark design for nonstationary environments. Particular attention will be given to methods that improve robustness, responsiveness, scalability, and interpretability under complex and time-varying conditions.
+              </div>
+              <div style="margin-bottom: 16px;">
+                The novelty of this session lies in its emphasis on the intersection of dynamic optimization, intelligent learning, and real-world adaptive systems. Unlike traditional sessions centered on static multiobjective optimization, this session highlights optimization under evolving environments, where both the search landscape and the preferred trade-offs may shift over time. It will encourage contributions that integrate data-driven modeling, online learning, predictive mechanisms, uncertainty quantification, and domain knowledge into dynamic multiobjective frameworks.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> Specific topics for the special session include but are not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;">Dynamic Pareto optimization and time-varying objective landscapes</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Change detection and environment-aware response strategies</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Prediction-based and memory-enhanced dynamic optimization</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Transfer learning and knowledge reuse in DMOPs</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Reinforcement learning for dynamic multiobjective decision-making</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Surrogate-assisted and data-driven dynamic optimization</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Dynamic constrained multiobjective optimization</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Large-scale and many-objective dynamic optimization</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Benchmark design and performance assessment for DMOPs</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Robustness, uncertainty, and online adaptation in changing environments</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Real-world applications in manufacturing, transportation, energy, and networks</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Hybrid frameworks combining evolutionary computation and machine learning</li>
+              </ul>
+              <div><span class="blod">Contact Email:</span> <a href="mailto:zhenzhongwang@xmu.edu.cn" target="_blank" style="color: #2B79CF;">zhenzhongwang@xmu.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-3: Harnessing Search and Inductive Biases in Optimization and Learning (Co-Chairs: Rui Liu, Yao Hu, Xiaoming Xue, Xi Lin)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> The No Free Lunch (NFL) theorems established a humbling truth for both machine learning and optimization: averaged over all possible problems, no algorithm outperforms any other. The remarkable successes of modern learning and optimization are therefore not the product of universally superior algorithms, but of algorithms whose biases happen to align with the structure of the problems to which they are applied. Effective learning and optimization thus depend fundamentally on incorporating appropriate inductive or search biases, grounded in a deep understanding of the problem domain.
+              </div>
+              <div style="margin-bottom: 16px;">
+                Such biases can be injected at many levels of an algorithmic pipeline. In learning, the hypothesis space is often constrained through specialized architectures, such as convolutional networks for visual data, graph neural networks for relational data, and physics-informed networks that embed conservation laws. Inductive biases also extend beyond architecture to data-centric mechanisms: large-scale pre-training equips foundation models with broad, task-agnostic priors that are subsequently tailored to downstream applications; data augmentation encodes geometric invariances; regularization terms favor desired solution properties; self-supervised objectives shape representation geometry; and Bayesian formulations introduce informative priors. In optimization, search biases manifest in customized operators such as permutation-preserving crossovers and repair mechanisms for constrained spaces, as well as in problem-specific encodings and decodings, landscape-aware initialization strategies, surrogate models that approximate expensive objectives, smoothness-informed predictors for Pareto manifolds, and decomposition frameworks that exploit modularity in large-scale decision spaces. In every case, performance gains stem not from algorithmic universality but from a principled match between bias and problem structure.
+              </div>
+              <div style="margin-bottom: 16px;">
+                This shared philosophy points to a deep and largely underexplored interplay between learning and optimization that this special session aims to highlight. Because both fields succeed by encoding problem-specific knowledge into their inductive or search biases, advances in one can directly inform the other. Learned models can serve as surrogates, heuristics, or operator selectors that inject data-driven biases into search procedures, as seen in neural combinatorial optimization and Bayesian optimization with structured priors. Conversely, search-based methods can shape the inductive biases of learning systems through neural architecture search, evolutionary feature construction, and the discovery of novel loss functions. More broadly, hybrid frameworks that co-design models and search procedures, such as differentiable optimization layers, meta-learned solvers, and the evolutionary construction of learning systems, demonstrate that the boundary between machine learning and strategic search has become remarkably porous.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> This special session invites contributions that engage with bias design as a first-class concern, including but not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Theoretical foundations:</span> theoretical analyses of the bias-performance relationship in light of the No Free Lunch (NFL) theorems;</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Embedding domain knowledge:</span> novel architectures, regularizers, priors, or loss functions that embed domain knowledge into learning;</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Inductive biases for foundation models:</span> strategies for injecting task-specific inductive biases into foundation models, bridging general priors with specific downstream constraints;</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Bias design for autonomous agents:</span> bias design for autonomous AI agents, including tool-use optimization and closed-loop decision-making;</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Optimization-specific biases:</span> tailored solution representations, search operators, surrogate models, or decomposition strategies for combinatorial, continuous, multi-objective, and constrained optimization;</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Learning-optimization synergy:</span> learning-assisted optimization and optimization-enhanced learning;</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Automated bias discovery:</span> meta-learning and meta-optimization approaches that automate bias discovery;</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Practical applications:</span> applications in scientific computing, engineering design, scheduling, drug discovery, and other domains where problem structure is rich and exploitable.</li>
+              </ul>
+              <div style="margin-bottom: 16px;">
+                By bringing together researchers from machine learning, evolutionary computation, mathematical programming, and applied domains, the session aims to foster a unified perspective in which the careful design, and, increasingly, the automated discovery, of inductive and search biases is recognized as a central engine of progress in both learning and optimization.
+              </div>
+              <div><span class="blod">Contact Email:</span> <a href="http://xuexm@upc.edu.cn" target="_blank" style="color: #2B79CF;">xuexm@upc.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-4: Learning-aided Evolutionary Computation: Principles, Algorithms, and Applications (Co-Chairs: Yuejiao Gong, Zeyuan Ma, Wenjie Qiu, Weineng Chen)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> The rapid advancement of machine learning and large language models (LLMs) is creating unprecedented opportunities for automated algorithm design in complex Black-Box Optimization (BBO). As optimization challenges across engineering, science, and economics grow in scale, traditional heuristic methods face increasing bottlenecks. Constrained by the No Free Lunch theorem, conventional approaches often rely on labor-intensive, expert-driven tuning, leading to limited generalization and sub-optimal performance across diverse problem landscapes.
+              </div>
+              <div style="margin-bottom: 16px;">
+                This Special Session aims to explore emerging research at the intersection of Meta-Learning, Evolutionary Computation, and Black-Box Optimization, with a particular focus on Meta-Black-Box Optimization (MetaBBO). MetaBBO introduces a bi-level, data-driven learning paradigm where a meta-level policy leverages low-level optimization feedback to dynamically guide and configure the algorithmic design of the low-level BBO optimizer. The session will provide a platform for researchers from academia and industry to discuss how advanced learning methodologies can be leveraged to automate and elevate the entire optimization workflow.
+              </div>
+              <div style="margin-bottom: 16px;">
+                The proposed session will bridge foundational algorithmic advances with diverse real-world applications. We particularly welcome submissions demonstrating MetaBBO across domains such as engineering design, intelligent transportation, resource allocation, AutoML, and scientific computing. Ultimately, this session seeks to foster the vision of fully end-to-end autonomous optimization systems that generalize seamlessly across diverse, unseen problem distributions with minimal human expertise.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> The session welcomes original research, case studies, and practical demonstrations related to Meta-Black-Box Optimization and its real-world applications. Topics of interest include, but are not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Automated Algorithm Selection and Configuration.</span> Learning-based methods for dynamic algorithm/operator selection, adaptive hyper-parameter tuning, and fine-grained algorithm configuration tailored to dynamic optimization landscapes.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Problem Characterization and Landscape Analysis.</span> Advanced state feature extraction techniques for understanding optimization problems and search spaces, to improve the efficiency and generalization of MetaBBO policies.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Automated Algorithm Generation and Discovery.</span> Methods leveraging neural policies, symbolic learning, or LLMs to autonomously discover, compose, and generate novel algorithmic workflows, update rules, or executable code.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Advanced Learning Paradigms for MetaBBO.</span> Innovative applications of Reinforcement Learning, Supervised Learning, Neuroevolution, and In-Context Learning with LLMs for the meta-learning of BBO optimizers.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Generalization, Benchmarking, and Evaluation.</span> Strategies for enhancing cross-problem generalization (e.g., multitask learning, diverse training distributions), alongside the development of comprehensive, fair benchmarking platforms and novel evaluation metrics for MetaBBO methods.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Real-World Applications of MetaBBO.</span> Practical deployments and case studies of MetaBBO frameworks in challenging domains, including but not limited to engineering design, intelligent transportation, resource allocation, AutoML, and scientific computing.</li>
+              </ul>
+              <div><span class="blod">Contact Email:</span> <a href="http://gongyuejiao@gmail.com" target="_blank" style="color: #2B79CF;">gongyuejiao@gmail.com</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-5: Learning-assisted Evolutionary Computation (Co-Chairs: Sheng-Hao Wu, Liu-Yue Luo, Zhi-Hui Zhan)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> Evolutionary computation (EC) is a powerful class of population-based optimization techniques for solving complex optimization problems. Unlike many conventional optimization methods, EC algorithms generally do not require strong assumptions on problem properties, such as differentiability, convexity, continuity, or explicit mathematical formulations. Owing to their flexibility, robustness, and global search capability, EC algorithms have been widely applied to scientific, engineering, industrial, and data-driven optimization tasks.
+              </div>
+              <div style="margin-bottom: 16px;">
+                Over the past decades, extensive research has been devoted to improving the performance of EC algorithms. Representative efforts include the design of effective evolutionary operators, adaptive parameter control strategies, reliable selection mechanisms, diversity preservation schemes, and hybrid local search techniques. These advances have substantially enhanced the search efficiency and robustness of EC. Nevertheless, when dealing with large-scale, high-dimensional, dynamic, expensive, multimodal, multitask, or highly constrained optimization problems, purely evolutionary search may still suffer from slow convergence, insufficient exploitation of useful search information, and limited scalability.
+              </div>
+              <div style="margin-bottom: 16px;">
+                Recently, learning-aided evolutionary computation (LEC) has attracted increasing attention as a promising paradigm for enhancing evolutionary optimization. The central idea of LEC is to acquire, represent, manage, and reuse useful knowledge extracted from optimization problems, candidate solutions, historical search behaviors, population distributions, environmental changes, or external data sources. By integrating learning mechanisms into the evolutionary process, LEC aims to improve population reproduction, guide search directions, accelerate convergence, maintain population diversity, and reduce computational cost. Various forms of knowledge have been explored in the EC community, including problem-specific knowledge, solution-distribution knowledge, evolutionary-state knowledge, surrogate-assisted knowledge, representation knowledge, transfer knowledge, and knowledge learned from machine learning models, including large language models.
+              </div>
+              <div style="margin-bottom: 16px;">
+                Despite recent progress, LEC remains an emerging research area with many open challenges. First, the theoretical foundations of LEC are still underdeveloped, and rigorous analysis is required to better understand how learned knowledge affects convergence, diversity, population dynamics, and runtime behavior. Second, effective knowledge representation and management remain challenging, especially when the learned knowledge is noisy, partial, dynamic, task-dependent, or expensive to obtain. Third, balancing learning and evolution is a critical issue, as excessive reliance on learned knowledge may lead to premature convergence, while insufficient learning may fail to improve search efficiency. Fourth, there is considerable potential for developing novel LEC frameworks that are scalable, interpretable, adaptive, distributed, and applicable to complex real-world optimization scenarios.
+              </div>
+              <div style="margin-bottom: 16px;">
+                This special session aims to provide a focused forum for researchers and practitioners working on the principles, algorithms, theoretical foundations, and applications of learning-aided evolutionary computation. The session welcomes original research contributions that investigate how knowledge can be effectively learned, represented, transferred, reused, and integrated into evolutionary search. It also encourages studies that develop new learning mechanisms, analyze the behavior of LEC algorithms, and demonstrate the practical impact of LEC on challenging real-world optimization problems.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> Authors are invited to submit high-quality original research papers related to, but not limited to, the following topics:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;">Learning knowledge from problem structures, candidate solutions, population distributions, fitness landscapes, and evolutionary processes;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Multi-view, multi-source, or hierarchical knowledge learning for EC;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Knowledge representation, knowledge management, knowledge transfer, and knowledge reuse in evolutionary optimization;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Learning-aided search mechanisms, reproduction operators, selection strategies, and diversity maintenance methods;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Efficient and scalable learning models for aiding evolutionary search;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Automatic parameter control and adaptive configuration in LEC;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Surrogate-assisted evolutionary computation and model-assisted optimization;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Large language models, foundation models, neural networks, probabilistic models, and other machine learning techniques for aiding EC;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Transfer learning, meta-learning, reinforcement learning, and online learning for evolutionary optimization;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">LEC for complex optimization problems, including large-scale, multitask, multimodal, dynamic, expensive, constrained, and many-objective optimization problems;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Knowledge acquisition from data and knowledge reuse across related optimization tasks;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Theoretical analysis of LEC algorithms, including runtime analysis, convergence analysis, stability analysis, individual dynamics, and population dynamics;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Interpretability, robustness, reliability, and generalization of learned knowledge in evolutionary optimization;</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Real-world applications of LEC, including but not limited to neural architecture search, circuit design, drug and molecular design, portfolio optimization, smart manufacturing, scheduling, logistics, and engineering design optimization.</li>
+              </ul>
+              <div><span class="blod">Contact Email:</span> <a href="http://shwu@scau.edu.cn" target="_blank" style="color: #2B79CF;">shwu@scau.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-6: Brain-inspired Intelligent Systems and Applications (Co-Chairs: Lei Deng, Zhuo Zou, Hao Guo)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> The rapid convergence of brain-inspired computing, neuromorphic engineering, and embodied intelligence is forging a transformative paradigm for next-generation intelligent systems. While conventional deep learning models and von Neumann computing architectures have achieved remarkable success, they face inherent bottlenecks in energy efficiency, computational latency, and behavioral robustness when deployed in complex, dynamic environments. By mimicking the sparse, asynchronous, and event-driven properties of biological neural circuits, brain-inspired principles offer a promising pathway to overcome these challenges, enabling systems to achieve low-power, high-speed perception, adaptive reasoning, and closed-loop control.
+              </div>
+              <div style="margin-bottom: 16px;">
+                This Special Session aims to provide a premier interdisciplinary forum for researchers from academia and industry to present and discuss the latest advances and emerging trends in brain-inspired intelligent systems, with a particular focus on the interplay between algorithms, neuromorphic hardware, and practical applications. Contributions exploring spiking neural networks, hybrid ANN-SNN computation, neuromorphic learning algorithms, event-based and multimodal sensing, algorithm-hardware co-design, embodied intelligence, robotics, object detection and tracking, and autonomous intelligent systems are particularly encouraged. The proposed session seeks to highlight both theoretical breakthroughs and practical implementations, promoting the development of intelligent systems that are energy-efficient, adaptive, and capable of operating in real-world environments with high temporal fidelity and robustness.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> The session welcomes original research, case studies, surveys, and practical demonstrations related to brain-inspired intelligent systems and their applications. Topics of interest include, but are not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Spiking Neural Networks and Brain-Inspired Models.</span> Design, analysis, and optimization of spiking neural networks, hybrid ANN-SNN architectures, and brain-inspired models for efficient perception, reasoning, and control, with attention to neural dynamics, spiking representation, and efficient learning.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Neuromorphic Platforms and Algorithm-Hardware Co-Design.</span> System-level methods that bridge brain-inspired algorithms with neuromorphic computing platforms, including algorithm-hardware co-design, chip architecture, and efficient deployment.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Event-Based and Multimodal Intelligent Perception.</span> Brain-inspired methods for event-driven sensing, visual perception, multisensory integration, and multimodal information processing, including object detection, tracking, recognition, decision, etc.</li>
+                <li style="list-style: disc; margin-bottom: 8px;"><span class="blod">Embodied Intelligence and Autonomous Systems.</span> Brain-inspired system architectures for embodied agents, robotic systems, autonomous platforms, and closed-loop perception-action interaction in complex and dynamic environments.</li>
+              </ul>
+              <div><span class="blod">Contact Email:</span> <a href="http://leideng@mail.tsinghua.edu.cn" target="_blank" style="color: #2B79CF;">leideng@mail.tsinghua.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-7: Brain-Inspired Methods for Multimodal Information Processing (Co-Chairs: Yang Yang, Malu Zhang, Yi Bin)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> This special session focuses on brain-inspired computing techniques-including both spiking neural networks (SNNs) and biologically plausible artificial neural networks (ANNs)-for processing and integrating information from multiple sensory modalities (e.g., vision, audio, touch). Brain-inspired approaches offer advantages in energy efficiency, robustness, and adaptive fusion for real-world multimodal tasks. The session aims to bring together researchers working at the intersection of brain-inspired models, multimodal perception, and embodied AI to discuss algorithms, architectures, and applications.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> The session welcomes original research, case studies, and surveys related to brain-inspired methods for multimodal information processing. Topics of interest include, but are not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;">Brain-inspired ANN architectures (e.g., predictive coding, attention mechanisms, memory-augmented networks, dual-process models) for multimodal fusion</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Spiking neural networks (SNNs) and hybrid ANN-SNN models for multimodal data</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Biologically plausible learning rules (e.g., local learning, Hebbian rules, STDP) for cross-modal integration</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Event-based and asynchronous sensing combined with brain-inspired processing</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Temporal coding, cross-modal alignment, and dynamic modality weighting</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Embodied agents and robots using brain-inspired multimodal learning</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Neuromorphic hardware and algorithm-hardware co-design</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Real-world applications: autonomous driving, human-robot interaction, healthcare, smart sensing, etc.</li>
+              </ul>
+              <div><span class="blod">Contact Email:</span> <a href="http://maluzhang@uestc.edu.cn" target="_blank" style="color: #2B79CF;">maluzhang@uestc.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-8: Foundation Models for Brain-Computer Interfaces: Generalizd Neural Representation methods and Real-World Applications (Chair: Sha Zhao)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> This special session focuses on the emerging paradigm of foundation models for brain-computer interfaces, aiming to advance generalizable, robust, and scalable neural decoding and interaction across individuals, tasks, devices, and application scenarios. The session will bring together researchers working on large-scale neural signal modeling, multimodal brain data learning, cross-subject and cross-domain adaptation, and real-world BCI applications.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> This session welcomes large-scale neural signal pretraining, self-supervised and generative neural modeling, unified brain representation learning, prompt-based and parameter-efficient adaptation, zero-shot and few-shot neural decoding, brain-language and brain-multimodal alignment, neural semantic representation, benchmark datasets and evaluation protocols, model scalability and interpretability, and trustworthy deployment of BCI foundation models in healthcare, neurorehabilitation, affective computing, intelligent interaction, and human-AI collaboration.
+              </div>
+              <div><span class="blod">Contact Email:</span> <a href="http://szhao@zju.edu.cn" target="_blank" style="color: #2B79CF;">szhao@zju.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-9: Neuromorphic Computing Devices and Chips (Chair: Xianfu Wang)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> Neuromorphic computing has emerged as a promising brain-inspired computing paradigm to break through the bottlenecks of traditional von Neumann architecture, including high power consumption, low parallel computing efficiency, and insufficient real-time processing capability for intelligent tasks. Benefiting from its high parallelism, low latency, and ultra-low power consumption characteristics, neuromorphic computing is widely regarded as the core supporting technology for next-generation artificial intelligence, edge computing, and embedded intelligent systems. This special session focuses on the latest research and cutting-edge progress in neuromorphic computing devices and dedicated neuromorphic chips. It aims to gather innovative research achievements covering novel functional devices, brain-inspired circuit design, chip architecture optimization, hardware implementation, and system-level application verification of neuromorphic computing. The session dedicates to providing an academic exchange platform for researchers and engineers in related fields, promoting the cross-integration of microelectronics, material science, artificial intelligence and integrated circuit design, and accelerating the practical deployment and industrialization of high-performance neuromorphic computing hardware systems.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> This session welcomes original research related to the fabrication, physical mechanism, performance optimization, hardware implementation and testing verification of neuromorphic computing devices, sensing-memory-computing integrated devices and neuromorphic chips. The specific topics include, but are not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;">Novel neuromorphic devices, artificial synaptic devices and sensing-memory-computing integrated devices, including memristors, ferroelectric devices, phase-change devices, piezoelectric neuromorphic devices and other emerging hardware devices</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Physical mechanism analysis, material optimization and fabrication process of neuromorphic and in-sensor computing devices</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Physical computing mechanisms and intrinsic computing characteristics based on functional materials and electronic devices</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Hardware devices and chip implementation for multimodal brain-inspired perception, including neuromorphic visual, auditory and tactile sensing hardware, multimodal sensing fusion devices and integrated hardware systems</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Hardware implementation and physical verification of neuromorphic chips for edge sensing and signal processing scenarios</li>
+              </ul>
+              <div><span class="blod">Contact Email:</span> <a href="http://xfwang87@uestc.edu.cn" target="_blank" style="color: #2B79CF;">xfwang87@uestc.edu.cn</a></div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-10: Advanced Brain-Computer Interfaces: Methods, Models, and Applications (Co-Chairs: Siqi Cai; Zhenxi Song)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> Recent advances in brain sensing technologies, artificial intelligence, computational neuroscience, and neuroengineering are expanding the capabilities and applications of Brain-Computer Interfaces (BCIs). Modern BCIs are moving from laboratory prototypes toward intelligent, adaptive, and user-centered systems for communication, rehabilitation, healthcare, assistive control, human-machine interaction, and human augmentation. However, practical BCI systems still face key challenges in signal quality, neural variability, cross-subject generalization, calibration efficiency, real-time decoding, interpretability, usability, and long-term deployment. This Special Session aims to provide a multidisciplinary forum for researchers working on advanced methods, computational models, system designs, and real-world applications of BCIs, covering the full pipeline from neural signal acquisition and processing to intelligent decoding, adaptive interaction, closed-loop feedback, and translational neurotechnology.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span> This session welcomes original research, case studies, surveys, and practical demonstrations related to advanced Brain-Computer Interfaces. Topics of interest include, but are not limited to:
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;">Neural signal acquisition and brain sensing technologies, including EEG, ear-EEG, fNIRS, MEG, ECoG, intracortical recordings, wearable neurotechnology, and multimodal brain sensing.</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Brain signal processing and neural data analysis, including artifact removal, signal enhancement, feature extraction, spatial-temporal modeling, connectivity analysis, and neural dynamics modeling.</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Machine learning and computational models for BCIs, including deep learning, graph neural networks, transformers, generative models, transfer learning, self-supervised learning, foundation models, and interpretable neural decoding.</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Adaptive, real-time, and closed-loop BCI systems, including online decoding, neurofeedback, closed-loop neurostimulation, reinforcement learning, calibration reduction, personalized BCIs, and long-term adaptive systems.</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Multimodal and hybrid brain-computer interfaces, including the fusion of neural signals with eye tracking, EMG, motion signals, physiological signals, speech, vision, audio, tactile sensing, and other modalities.</li>
+                <li style="list-style: disc; margin-bottom: 8px;">BCI applications and translational neurotechnology, including assistive communication, neurorehabilitation, neuroprosthetics, brain-controlled robotics, cognitive assessment, digital health, human augmentation, user-centered design, and clinical deployment.</li>
+              </ul>
+              <div>
+                <span class="blod">Contact Email:</span>
+                <a href="http://caisiqi@hit.edu.cn" target="_blank" style="color: #2B79CF;">caisiqi@hit.edu.cn</a>;
+                <a href="http://songzhenxi@hit.edu.cn" target="_blank" style="color: #2B79CF;">songzhenxi@hit.edu.cn</a>
+              </div>
+            </div>
+          </details>
+          <details style="margin-bottom: 24px;">
+            <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
+              <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
+                <span style="position: absolute; left: 1px; top: 5px; width: 10px; height: 3px; background: #aaa;"></span>
+                <span class="session-toggle-vertical" style="position: absolute; left: 4.5px; top: 1px; width: 3px; height: 10px; background: #aaa;"></span>
+              </span>SS-11: SpikeCV: Ultra-High-Speed Spike Vision and Intelligent Perception (Co-Chairs: Yajing Zheng; Lin Zhu; Yakun Chang; Rui Zhao; Xijie Xiang; Yujia Liu)
+            </summary>
+            <div style="margin: 10px 0 0 20px; font-size: inherit; line-height: inherit; color: #333;">
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Special Session Theme:</span> Spike cameras provide a novel continuous vision paradigm that captures scene dynamics through ultra-high-speed spike streams. Combined with advances in computational imaging, intelligent perception, neuromorphic computing, and embodied intelligence, spike vision is rapidly expanding from sensing and reconstruction to high-level understanding and real-world applications. Supported by the open-source SpikeCV ecosystem, this Special Session aims to bring together researchers working on spike sensing, imaging, perception, learning, and intelligent systems, and to promote future developments in continuous vision technologies. SpikeCV homepage: <a href="https://spikecv.github.io/" target="_blank" style="color: #2B79CF;">https://spikecv.github.io/</a>.
+              </div>
+              <div style="margin-bottom: 16px;">
+                <span class="blod">Scope of the Special Session:</span>
+              </div>
+              <ul style="margin: 0 0 16px 28px; padding: 0;">
+                <li style="list-style: disc; margin-bottom: 8px;">Spike camera sensing and coding</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Texture reconstruction and enhancement</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Ultra-high-speed computational imaging</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Spike super-resolution</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Autofocus for spike camera</li>
+                <li style="list-style: disc; margin-bottom: 8px;">HDR imaging and low-light vision</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Motion deblurring and optical flow</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Spike-based object detection and tracking</li>
+                <li style="list-style: disc; margin-bottom: 8px;">3D reconstruction and scene understanding</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Neuromorphic perception systems</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Robotics and autonomous driving</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Low-latency and energy-efficient intelligent systems</li>
+                <li style="list-style: disc; margin-bottom: 8px;">Open-source spike vision platforms and datasets</li>
+              </ul>
+              <div>
+                <span class="blod">Contact Email:</span>
+                <a href="http://yjzheng@pku.edu.cn" target="_blank" style="color: #2B79CF;">yjzheng@pku.edu.cn</a>;
+                <a href="http://spikecv@outlook.com" target="_blank" style="color: #2B79CF;">spikecv@outlook.com</a>
+              </div>
+            </div>
+          </details>
+        </div>
+        <div class="special-guidance-title">
+          <span class="blod">Submission guidance:</span>
+        </div>
+        <div class="special-guidance-content">
+          • Submission portal: <a href="https://cmt3.research.microsoft.com/IEEEMIND2026" target="_blank" style="color: #2B79CF;">https://cmt3.research.microsoft.com/IEEEMIND2026</a><br />
+          • <a target="_blank" style="color: #2B79CF;"><span class="blod">[Acknowledgment]</span>: The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</a><br />
+          • Submission of papers include <span class="blod">LONG</span> papers (up to <span class="blod">6</span> pages), <span class="blod">SHORT</span> papers (up to <span class="blod">2</span> pages), and <span class="blod">ABSTRACT</span> (up to <span class="blod">1</span> page), including all text, figures, and references. LONG and SHORT papers will be peer-reviewed and published in the conference proceedings if accepted and registered. The proceedings will be indexed by IEEE XPLORE <a target="_blank" style="color: #2B79CF;">(ISBN: 979-8-3195-0889-8)</a>.
         </div>
         <div class="telTitle">
           These sessions provide a dynamic platform to share innovative ideas, address emerging research challenges, and discuss future directions in niche areas not typically covered in the main conference. Special Sessions can <span class="blod">include diverse formats such as traditional presentations, posters, and interactive "Show and Tell" sessions,</span> fostering a collaborative and engaging environment.
@@ -65,7 +457,7 @@
         <div>
           We welcome proposals from academia and industry, including a detailed description of the session theme, its significance, and the potential contributions to the field. Submissions should also include a list of prospective contributors and their topics. This is an excellent opportunity to highlight groundbreaking work and facilitate meaningful discussions in specialized areas of interest.
         </div>
-		<div><span class="blod">Special Session Proposal Submission:</span> <a href="xingy.wu@polyu.edu.hk" target="_blank" style="color: #2B79CF;">xingy.wu@polyu.edu.hk</a>.</div>
+        <div><span class="blod">Special Session Proposal Submission:</span> <a href="xingy.wu@polyu.edu.hk" target="_blank" style="color: #2B79CF;">xingy.wu@polyu.edu.hk</a>.</div>
         <!-- <div>Special Session Proposal Submission: 
           <a href="mailto:icmind2026@gmail.com" target="_blank" class="blod">icmind2026@gmail.com</a>
         </div> -->
@@ -94,8 +486,13 @@
       <li class="layui-nav-item">
 		<li class="layui-nav-item"><a href="javascript:;">Calls</a>
         <dl class="layui-nav-child">
-        <dd><a href="call-for-submissions.html">Call for Papers</a></dd>
-		<dd><a href="call-for-special-session.html">Call for Special Sessions</a></dd>  
+        <dd class="threeNav">
+            <a href="javascript:;">Call for Papers</a>
+            <dl class="layui-nav-child threeNavWrap">
+              <dd><a href="call-for-submissions.html">Main Track</a></dd>
+              <dd><a href="call-for-special-session.html">Special Paper Sessions</a></dd>
+            </dl>
+          </dd>  
           <!-- <dd><a href="author-submissions.html">Author Submissions</a></dd><dd><a href="camera-ready-guideline.html">Camera Ready Guideline</a></dd> -->
         </dl>
       </li>
@@ -113,4 +510,14 @@
   <script type='text/javascript' src='./js/jquery.min.js' charset='utf-8'></script>
   <script type='text/javascript' src='./js/layui.js' charset='utf-8'></script>
   <script type='text/javascript' src='./js/common.js' charset='utf-8'></script>
+  <script>
+    document.querySelectorAll('.telTitle details').forEach(function(session) {
+      var vertical = session.querySelector('.session-toggle-vertical');
+      var updateToggle = function() {
+        vertical.style.display = session.open ? 'none' : 'block';
+      };
+      updateToggle();
+      session.addEventListener('toggle', updateToggle);
+    });
+  </script>
   
