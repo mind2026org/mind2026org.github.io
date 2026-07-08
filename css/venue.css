@@ -51,6 +51,105 @@
 .vfImg {
   width: 250px;
 }
+
+.roomBookingQrWrap {
+  padding-bottom: 0;
+}
+
+.roomBookingQr {
+  width: 220px;
+  max-width: 100%;
+}
+
+.transportationGuide {
+  margin-top: 18px;
+}
+
+.transportationItem {
+  margin-top: 18px;
+  padding: 18px 22px 20px;
+  border: 1px solid #E3EAF3;
+  border-left: 5px solid #2B79CF;
+  border-radius: 8px;
+  background: #FBFDFF;
+  box-sizing: border-box;
+}
+
+.transportationHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.transportationNumber {
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: #2B79CF;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.transportationTitle {
+  font-size: 21px;
+  font-weight: 700;
+  color: #333333;
+  line-height: 30px;
+}
+
+.transportationDistance {
+  font-size: 18px;
+  color: #666666;
+  line-height: 26px;
+}
+
+.transportationMode {
+  display: grid;
+  grid-template-columns: 76px 1fr;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 19px;
+  color: #333333;
+  line-height: 28px;
+}
+
+.transportationLabel {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 4px;
+  background: #EEF4FB;
+  color: #18449C;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.transportationNote {
+  color: #666666;
+}
+
+.transportationStep {
+  margin-top: 6px;
+  padding-left: 14px;
+  border-left: 2px solid #D6E3F2;
+  color: #444444;
+}
+
+.venueMap {
+  margin-top: 24px;
+}
+
+.venueMap iframe {
+  width: 100%;
+  max-width: 600px;
+}
+
 /* 适配移动端 */
 @media screen and (max-width: 750px) {
   .vWrap {
@@ -77,5 +176,57 @@
   }
   .dTitle1 {
     margin: 2.667rem 0 0;
+  }
+  .roomBookingQr {
+    width: 36rem;
+  }
+  .transportationGuide {
+    margin-top: 2.667rem;
+  }
+  .transportationItem {
+    margin-top: 3.2rem;
+    padding: 3rem;
+    border-left-width: .8rem;
+  }
+  .transportationHeader {
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  .transportationNumber {
+    flex-basis: 5.2rem;
+    width: 5.2rem;
+    height: 5.2rem;
+    line-height: 5.2rem;
+    font-size: 3rem;
+  }
+  .transportationTitle {
+    font-size: 3.467rem;
+    line-height: 4rem;
+  }
+  .transportationDistance {
+    font-size: 3rem;
+    line-height: 3.8rem;
+  }
+  .transportationMode {
+    grid-template-columns: 13rem 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .transportationLabel {
+    height: 4.4rem;
+    line-height: 4.4rem;
+    font-size: 2.8rem;
+  }
+  .transportationStep {
+    margin-top: 1.2rem;
+    padding-left: 2rem;
+  }
+  .venueMap {
+    margin-top: 4rem;
+  }
+  .venueMap iframe {
+    height: 60rem;
   }
 }
