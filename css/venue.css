@@ -96,6 +96,126 @@
   width: 250px;
 }
 
+.accommodationIntro {
+  padding: 16px 20px;
+  border: 1px solid #D8E2EE;
+  border-left: 5px solid #2B79CF;
+  border-radius: 8px;
+  background: #F7FAFC;
+}
+
+.accommodationPanel {
+  margin-top: 20px;
+  padding: 22px 24px 24px;
+  border: 1px solid #D8E2EE;
+  border-left: 5px solid #2B79CF;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+}
+
+.accommodationSectionTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+  color: #18449C;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.accommodationMarker {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #EEF4FB;
+  color: #2B79CF;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.accommodationInfo {
+  padding: 14px 16px;
+  border-radius: 6px;
+  background: #F7FAFC;
+  color: #1F2937;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.roomGallery {
+  margin-top: 20px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.roomBookingPanel {
+  margin-top: 24px;
+}
+
+.roomBookingGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.bookingCard {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #D8E2EE;
+  border-radius: 8px;
+  background: #F7FAFC;
+}
+
+.bookingCardTitle {
+  margin-bottom: 10px;
+  color: #18449C;
+  font-size: 19px;
+  line-height: 1.35;
+}
+
+.bookingCardTitle strong {
+  color: #18449C;
+}
+
+.bookingCardText {
+  color: #1F2937;
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+.bookingCardText a {
+  color: #2B79CF !important;
+  font-weight: 700;
+}
+
+.bookingCardText a:hover {
+  text-decoration: underline;
+}
+
+.bookingDownloadLink {
+  display: inline-block;
+  margin: 0 2px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #EEF4FB;
+  text-decoration: none;
+}
+
+.bookingDownloadLink:hover {
+  background: #E2EEF9;
+  text-decoration: none !important;
+}
+
+.bookingCardText strong {
+  color: #18449C;
+}
+
 .roomBookingQrWrap {
   width: fit-content;
   max-width: 100%;
@@ -285,6 +405,72 @@
     width: 100%;
     margin-left: 0;
     border-radius: 1rem;
+  }
+
+  .accommodationIntro {
+    padding: 2.4rem 3rem;
+    border-left-width: .8rem;
+  }
+
+  .accommodationPanel {
+    margin-top: 3rem;
+    padding: 3rem;
+    border-left-width: .8rem;
+    border-radius: 1rem;
+  }
+
+  .accommodationSectionTitle {
+    gap: 1.4rem;
+    margin-bottom: 2.4rem;
+    font-size: 3.6rem;
+  }
+
+  .accommodationMarker {
+    flex-basis: 3.2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  .accommodationInfo {
+    padding: 2.4rem;
+    font-size: 3.2rem;
+    line-height: 1.45;
+  }
+
+  .roomGallery {
+    margin-top: 3rem;
+    padding-bottom: 0;
+  }
+
+  .roomBookingPanel {
+    margin-top: 3rem;
+  }
+
+  .roomBookingGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .bookingCard {
+    padding: 3rem;
+    border-radius: 1rem;
+  }
+
+  .bookingCardTitle {
+    margin-bottom: 1.6rem;
+    font-size: 3.4rem;
+  }
+
+  .bookingCardText {
+    font-size: 3.2rem;
+    line-height: 1.45;
+  }
+
+  .bookingDownloadLink {
+    margin: .4rem .2rem;
+    padding: .4rem 1.4rem;
   }
 
   .roomBookingQrWrap {
