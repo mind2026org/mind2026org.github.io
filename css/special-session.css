@@ -1,0 +1,536 @@
+/* Special Paper Sessions page */
+.specialSessionsPage .cContent {
+  padding: 48px 0 82px;
+  background: linear-gradient(180deg, #fff 0%, #F8FBFF 100%);
+}
+
+.specialSessionsPage .cWrap {
+  width: min(calc(100% - 48px), 1120px);
+  font-size: 18px;
+  line-height: 1.65;
+  color: #1F2937;
+}
+
+.special-call-title,
+.special-guidance-title {
+  position: relative;
+  margin: 0 0 18px;
+  padding-left: 18px;
+  color: #18449C;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.special-call-title::before,
+.special-guidance-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: 26px;
+  border-radius: 999px;
+  background: #2B79CF;
+}
+
+.specialIntro,
+.specialProposalIntro,
+.specialProposalText,
+.specialProposalCta {
+  border: 1px solid #D8E2EE;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+}
+
+.specialIntro {
+  padding: 22px 26px;
+  border-left: 5px solid #2B79CF;
+}
+
+.specialSessionsPage .blod {
+  color: #18449C;
+}
+
+.specialSessionList {
+  display: grid;
+  gap: 14px;
+  margin: 38px 0 44px;
+}
+
+.specialSessionList details {
+  margin: 0 !important;
+  overflow: hidden;
+  border: 1px solid #D8E2EE;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+}
+
+.specialSessionList details[open] {
+  border-color: rgba(43, 121, 207, .52);
+  box-shadow: 0 16px 30px rgba(24, 68, 156, .12);
+}
+
+.specialSessionList summary {
+  display: grid !important;
+  grid-template-columns: 18px minmax(0, 1fr);
+  gap: 14px;
+  align-items: start !important;
+  padding: 18px 22px !important;
+  cursor: pointer !important;
+  list-style: none !important;
+  color: #1F2937 !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  line-height: 1.42 !important;
+  background: #fff;
+  transition: background .2s ease, color .2s ease;
+}
+
+.specialSessionList summary::-webkit-details-marker {
+  display: none;
+}
+
+.specialSessionList summary:hover {
+  background: #F7FAFC;
+  color: #18449C !important;
+}
+
+.specialSessionList details[open] summary {
+  border-bottom: 1px solid #E3EAF3;
+  background: #F7FAFC;
+  color: #18449C !important;
+}
+
+.specialSessionList .session-toggle {
+  width: 18px !important;
+  height: 18px !important;
+  margin: 2px 0 0 !important;
+  border-radius: 5px;
+  background: #EAF3FF;
+}
+
+.specialSessionList .session-toggle > span {
+  border-radius: 999px;
+  background: #2B79CF !important;
+}
+
+.specialSessionList .session-toggle > span:first-child {
+  left: 4px !important;
+  top: 8px !important;
+  width: 10px !important;
+  height: 2px !important;
+}
+
+.specialSessionList .session-toggle-vertical {
+  left: 8px !important;
+  top: 4px !important;
+  width: 2px !important;
+  height: 10px !important;
+}
+
+.specialSessionList details[open] .session-toggle {
+  background: #18449C;
+}
+
+.specialSessionList details[open] .session-toggle > span {
+  background: #fff !important;
+}
+
+.specialSessionList details > div {
+  margin: 0 !important;
+  padding: 0 24px 24px 54px !important;
+  color: #1F2937 !important;
+  font-size: 16px !important;
+  line-height: 1.68 !important;
+}
+
+.specialSessionList details > div > div {
+  margin-bottom: 14px !important;
+}
+
+.specialSessionList details > div > div:last-child {
+  margin: 18px 0 0 !important;
+  padding: 14px 16px;
+  border: 1px solid #D8E2EE;
+  border-left: 4px solid #2B79CF;
+  border-radius: 8px;
+  background: #F7FAFC;
+}
+
+.specialSessionList ul {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 18px !important;
+  padding: 0 !important;
+}
+
+.specialSessionList li {
+  position: relative;
+  margin: 0 !important;
+  padding-left: 18px;
+  list-style: none !important;
+}
+
+.specialSessionList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .82em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2B79CF;
+}
+
+.specialSessionList a,
+.special-guidance-content a,
+.specialProposalCta a {
+  color: #2B79CF !important;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.specialSessionList a:hover,
+.special-guidance-content a:hover,
+.specialProposalCta a:hover {
+  text-decoration: underline;
+}
+
+.special-guidance-title {
+  margin-top: 42px;
+}
+
+.special-guidance-content {
+  display: grid;
+  gap: 16px;
+  margin-top: 14px;
+  overflow-wrap: anywhere;
+}
+
+.specialSubmissionPortal,
+.specialPaperTypeCard,
+.specialGuidancePanel,
+.specialAcknowledgmentNote {
+  border: 1px solid #D8E2EE;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+}
+
+.specialSubmissionPortal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 20px 24px;
+  border-left: 5px solid #2B79CF;
+}
+
+.specialSubmissionPortal span,
+.specialPaperTypeCard span {
+  display: block;
+  color: #64748B;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.specialSubmissionPortal strong {
+  display: block;
+  margin-top: 8px;
+  color: #1F2937;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.specialSubmissionPortal a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  padding: 0 18px;
+  border-radius: 8px;
+  background: #18449C;
+  color: #fff !important;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.specialSubmissionPortal a:hover {
+  background: #2B79CF;
+  text-decoration: none;
+}
+
+.specialPaperTypeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.specialPaperTypeCard {
+  padding: 20px 22px;
+  border-top: 3px solid #2B79CF;
+}
+
+.specialPaperTypeCard strong {
+  display: block;
+  margin-top: 8px;
+  color: #18449C;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.specialPaperTypeCard p,
+.specialGuidancePanel p {
+  margin: 8px 0 0;
+  color: #1F2937;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.specialGuidancePanel {
+  padding: 20px 24px;
+}
+
+.specialGuidancePanel h3 {
+  margin: 0;
+  color: #18449C;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.specialAcknowledgmentNote {
+  padding: 18px 22px;
+  color: #475569;
+  font-size: 15px;
+  line-height: 1.6;
+  background: #F7FAFC;
+}
+
+.specialAcknowledgmentNote span {
+  color: #18449C;
+  font-weight: 700;
+}
+
+.specialProposalIntro {
+  margin: 42px 0 0;
+  padding: 22px 26px;
+  border-left: 5px solid #2B79CF;
+}
+
+.specialProposalText {
+  margin-top: 16px;
+  padding: 22px 26px;
+}
+
+.specialProposalCta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: baseline;
+  margin-top: 16px;
+  padding: 18px 22px;
+  background: #F7FAFC;
+}
+
+@media screen and (max-width: 750px) {
+  .specialSessionsPage .cContent {
+    padding: 5.333rem 5.333rem 9rem;
+  }
+
+  .specialSessionsPage .cWrap {
+    width: 100%;
+    font-size: 3.2rem;
+    line-height: 1.55;
+  }
+
+  .special-call-title,
+  .special-guidance-title {
+    margin-bottom: 2.4rem;
+    padding-left: 2.4rem;
+    font-size: 4.4rem;
+    line-height: 1.25;
+  }
+
+  .special-call-title::before,
+  .special-guidance-title::before {
+    top: .7rem;
+    width: .8rem;
+    height: 4rem;
+  }
+
+  .specialIntro,
+  .specialProposalIntro,
+  .specialProposalText,
+  .specialProposalCta {
+    padding: 3rem;
+    border-radius: 1rem;
+  }
+
+  .specialIntro,
+  .specialProposalIntro {
+    border-left-width: .8rem;
+  }
+
+  .specialSessionList {
+    gap: 2.6rem;
+    margin: 5rem 0 6rem;
+  }
+
+  .specialSessionList details {
+    border-radius: 1rem;
+  }
+
+  .specialSessionList summary {
+    grid-template-columns: 2.6rem minmax(0, 1fr);
+    gap: 2rem;
+    padding: 3rem !important;
+    font-size: 3.2rem !important;
+    line-height: 1.42 !important;
+  }
+
+  .specialSessionList .session-toggle {
+    width: 2.6rem !important;
+    height: 2.6rem !important;
+    margin-top: .45rem !important;
+    border-radius: .7rem;
+  }
+
+  .specialSessionList .session-toggle > span:first-child {
+    left: .55rem !important;
+    top: 1.2rem !important;
+    width: 1.5rem !important;
+    height: .25rem !important;
+  }
+
+  .specialSessionList .session-toggle-vertical {
+    left: 1.18rem !important;
+    top: .55rem !important;
+    width: .25rem !important;
+    height: 1.5rem !important;
+  }
+
+  .specialSessionList details > div {
+    padding: 0 3rem 3rem 7.6rem !important;
+    font-size: 3rem !important;
+    line-height: 1.58 !important;
+  }
+
+  .specialSessionList details > div > div {
+    margin-bottom: 2.4rem !important;
+  }
+
+  .specialSessionList details > div > div:last-child {
+    margin-top: 3rem !important;
+    padding: 2.4rem;
+    border-left-width: .7rem;
+    border-radius: 1rem;
+  }
+
+  .specialSessionList ul {
+    gap: 1.6rem;
+    margin: 1.8rem 0 3rem !important;
+  }
+
+  .specialSessionList li {
+    padding-left: 2.4rem;
+  }
+
+  .specialSessionList li::before {
+    top: .82em;
+    width: .9rem;
+    height: .9rem;
+  }
+
+  .special-guidance-title {
+    margin-top: 6rem;
+  }
+
+  .special-guidance-content,
+  .specialProposalIntro,
+  .specialProposalText,
+  .specialProposalCta {
+    font-size: 3.2rem;
+    line-height: 1.58;
+  }
+
+  .special-guidance-content {
+    gap: 2.6rem;
+    margin-top: 2.4rem;
+  }
+
+  .specialSubmissionPortal,
+  .specialPaperTypeCard,
+  .specialGuidancePanel,
+  .specialAcknowledgmentNote {
+    padding: 3rem;
+    border-radius: 1rem;
+  }
+
+  .specialSubmissionPortal {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2.2rem;
+    border-left-width: .8rem;
+  }
+
+  .specialSubmissionPortal span,
+  .specialPaperTypeCard span {
+    font-size: 2.4rem;
+  }
+
+  .specialSubmissionPortal strong,
+  .specialPaperTypeCard strong {
+    margin-top: 1rem;
+    font-size: 3.4rem;
+    line-height: 1.3;
+  }
+
+  .specialSubmissionPortal a {
+    min-height: 6.4rem;
+    padding: 0 3rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+  }
+
+  .specialPaperTypeGrid {
+    grid-template-columns: 1fr;
+    gap: 2.6rem;
+  }
+
+  .specialPaperTypeCard {
+    border-top-width: .55rem;
+  }
+
+  .specialPaperTypeCard p,
+  .specialGuidancePanel p,
+  .specialAcknowledgmentNote {
+    font-size: 3.2rem;
+    line-height: 1.55;
+  }
+
+  .specialGuidancePanel h3 {
+    font-size: 3.4rem;
+    line-height: 1.3;
+  }
+
+  .specialProposalIntro {
+    margin-top: 6rem;
+  }
+
+  .specialProposalText,
+  .specialProposalCta {
+    margin-top: 2.6rem;
+  }
+}

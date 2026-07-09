@@ -7,7 +7,7 @@
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>MIND 2026</title>
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="keyword" content="MIND2026, MIND 2026">
       <meta name="description" content="The International Conference on Machine Intelligence and Nature-inspireD Computing (MIND)">
       <meta http-equiv="Cache-Control" content="no-cache" />
@@ -17,51 +17,10 @@
       <link rel="stylesheet" type="text/css" href="./css/layui.css" />
       <link rel="stylesheet" type="text/css" href="./css/common.css" />
       <link rel="stylesheet" type="text/css" href="./css/contact.css" />
-      <style>
-        .special-call-title {
-          font-weight: 700;
-          font-size: 26px;
-          color: #333333;
-          margin: 0 0 20px;
-        }
-
-        .special-guidance-title {
-          font-size: 22px;
-          color: #333333;
-          letter-spacing: 0;
-          line-height: 30px;
-          margin-top: 26px;
-        }
-
-        .special-guidance-content {
-          font-size: 22px;
-          color: #333333;
-          letter-spacing: 0;
-          line-height: 30px;
-        }
-
-        @media screen and (max-width: 750px) {
-          .special-call-title {
-            font-size: 4rem;
-            margin-bottom: 2.667rem;
-          }
-
-          .special-guidance-title {
-            font-size: 3.467rem;
-            line-height: 4rem;
-            margin-top: 3.467rem;
-          }
-
-          .special-guidance-content {
-            font-size: 3.467rem;
-            line-height: 4rem;
-            word-break: break-all;
-          }
-        }
-      </style>
+      <link rel="stylesheet" type="text/css" href="./css/special-session.css" />
   </head>
   <body>
-  <div class="pages">
+  <div class="pages specialSessionsPage">
 	  <div class="navPc">
   <a href="https://www.ic-mind.org/"><img src="images/mind2026logo.png" /></a>
   <ul class="layui-nav">
@@ -120,9 +79,9 @@
         <div class="special-call-title">
           Call for Papers
         </div>
-        <div><span class="blod">MIND 2026</span> also invites papers for various special sessions that explore timely and specialized topics <span class="blod">within the scope of Machine Intelligence and Nature-inspired Computing. </span> The special session papers collectively outline a broad and evolving landscape of intelligent computing, spanning learning and optimization, brain-inspired systems, neuromorphic devices, multimodal perception, brain-computer interfaces, and real-world intelligent applications. Together, these sessions reflect the diversity of current research frontiers and the growing connections among models, algorithms, hardware, data, and deployment scenarios. They are intended to present a structured overview of focused topics that complement the main track while emphasizing the breadth and future direction of the MIND community.
+        <div class="specialIntro"><span class="blod">MIND 2026</span> also invites papers for various special sessions that explore timely and specialized topics <span class="blod">within the scope of Machine Intelligence and Nature-inspired Computing. </span> The special session papers collectively outline a broad and evolving landscape of intelligent computing, spanning learning and optimization, brain-inspired systems, neuromorphic devices, multimodal perception, brain-computer interfaces, and real-world intelligent applications. Together, these sessions reflect the diversity of current research frontiers and the growing connections among models, algorithms, hardware, data, and deployment scenarios. They are intended to present a structured overview of focused topics that complement the main track while emphasizing the breadth and future direction of the MIND community.
         </div>
-        <div class="telTitle">
+        <div class="telTitle specialSessionList">
           <details style="margin-bottom: 24px;">
             <summary style="cursor: pointer; list-style: none; display: flex; align-items: center; font-size: inherit; line-height: inherit; font-weight: 700; color: #333;">
               <span class="session-toggle" style="position: relative; display: inline-block; flex: 0 0 auto; width: 12px; height: 12px; margin-right: 8px;">
@@ -457,20 +416,51 @@
           </details>
         </div>
         <div class="special-guidance-title">
-          <span class="blod">Submission guidance:</span>
+          Submission Guidance
         </div>
         <div class="special-guidance-content">
-          • Submission portal: <a href="https://cmt3.research.microsoft.com/IEEEMIND2026" target="_blank" style="color: #2B79CF;">https://cmt3.research.microsoft.com/IEEEMIND2026</a><br />
-          • <a target="_blank" style="color: #2B79CF;"><span class="blod">[Acknowledgment]</span>: The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</a><br />
-          • Submission of papers include <span class="blod">LONG</span> papers (up to <span class="blod">6</span> pages), <span class="blod">SHORT</span> papers (up to <span class="blod">2</span> pages), and <span class="blod">ABSTRACT</span> (up to <span class="blod">1</span> page), including all text, figures, and references. LONG and SHORT papers will be peer-reviewed and published in the conference proceedings if accepted and registered. The proceedings will be indexed by IEEE XPLORE <a target="_blank" style="color: #2B79CF;">(ISBN: 979-8-3195-0889-8)</a>.
+          <div class="specialSubmissionPortal">
+            <div>
+              <span>Submission Portal</span>
+              <strong>Microsoft CMT for IEEE MIND 2026</strong>
+            </div>
+            <a href="https://cmt3.research.microsoft.com/IEEEMIND2026" target="_blank">Submit Paper</a>
+          </div>
+
+          <div class="specialPaperTypeGrid">
+            <div class="specialPaperTypeCard">
+              <span>LONG</span>
+              <strong>Up to 6 pages</strong>
+              <p>Including all text, figures, and references.</p>
+            </div>
+            <div class="specialPaperTypeCard">
+              <span>SHORT</span>
+              <strong>Up to 2 pages</strong>
+              <p>Including all text, figures, and references.</p>
+            </div>
+            <div class="specialPaperTypeCard">
+              <span>ABSTRACT</span>
+              <strong>Up to 1 page</strong>
+              <p>Including all text, figures, and references.</p>
+            </div>
+          </div>
+
+          <div class="specialGuidancePanel">
+            <h3>Proceedings and Indexing</h3>
+            <p>LONG and SHORT papers will be peer-reviewed and published in the conference proceedings if accepted and registered. The proceedings will be indexed by IEEE XPLORE <span class="blod">(ISBN: 979-8-3195-0889-8)</span>.</p>
+          </div>
+
+          <div class="specialAcknowledgmentNote">
+            <span>[Acknowledgment]</span> The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
+          </div>
         </div>
-        <div class="telTitle">
+        <div class="telTitle specialProposalIntro">
           These sessions provide a dynamic platform to share innovative ideas, address emerging research challenges, and discuss future directions in niche areas not typically covered in the main conference. Special Sessions can <span class="blod">include diverse formats such as traditional presentations, posters, and interactive "Show and Tell" sessions,</span> fostering a collaborative and engaging environment.
         </div>
-        <div>
+        <div class="specialProposalText">
           We welcome proposals from academia and industry, including a detailed description of the session theme, its significance, and the potential contributions to the field. Submissions should also include a list of prospective contributors and their topics. This is an excellent opportunity to highlight groundbreaking work and facilitate meaningful discussions in specialized areas of interest.
         </div>
-        <div><span class="blod">Special Session Proposal Submission:</span> <a href="xingy.wu@polyu.edu.hk" target="_blank" style="color: #2B79CF;">xingy.wu@polyu.edu.hk</a>.</div>
+        <div class="specialProposalCta"><span class="blod">Special Session Proposal Submission:</span> <a href="xingy.wu@polyu.edu.hk" target="_blank" style="color: #2B79CF;">xingy.wu@polyu.edu.hk</a>.</div>
         <!-- <div>Special Session Proposal Submission: 
           <a href="mailto:icmind2026@gmail.com" target="_blank" class="blod">icmind2026@gmail.com</a>
         </div> -->
@@ -534,8 +524,9 @@
   <script type='text/javascript' src='./js/layui.js' charset='utf-8'></script>
   <script type='text/javascript' src='./js/common.js' charset='utf-8'></script>
   <script>
-    document.querySelectorAll('.telTitle details').forEach(function(session) {
+    document.querySelectorAll('.specialSessionList details').forEach(function(session) {
       var vertical = session.querySelector('.session-toggle-vertical');
+      if (!vertical) return;
       var updateToggle = function() {
         vertical.style.display = session.open ? 'none' : 'block';
       };
@@ -543,4 +534,5 @@
       session.addEventListener('toggle', updateToggle);
     });
   </script>
-  
+  </body>
+</html>
