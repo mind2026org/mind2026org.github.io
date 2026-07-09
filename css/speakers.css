@@ -225,6 +225,20 @@
   text-align: left;
 }
 
+.speakersPage .commonTitle {
+  flex-direction: column;
+}
+
+.speakersPage .commonTitle .cTitle1 {
+  width: auto;
+  margin: 8px 0 0;
+  color: #666666;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+}
+
 .speakersPage .speakersUl {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -452,6 +466,13 @@
   .speakersPage .cTitle1 {
     margin-top: 1.2rem;
     font-size: 3.2rem;
+  }
+
+  .speakersPage .commonTitle .cTitle1 {
+    width: auto;
+    margin-top: 1.2rem;
+    font-size: 3.2rem;
+    text-align: center;
   }
 
   .speakersPage .cTitle3 {
