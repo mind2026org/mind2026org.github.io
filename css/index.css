@@ -1007,8 +1007,9 @@
 
   .mobileLogoGridSingle {
     grid-template-columns: minmax(0, 1fr);
-    max-width: 58rem;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
   }
 
   .mobileLogoTile {
