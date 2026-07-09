@@ -125,9 +125,10 @@
 }
 
 .deadLine .img {
-  text-align: center;
-  width: 100%;
-  margin-top: 55px;
+  display: block;
+  width: 82%;
+  max-width: 1280px;
+  margin: 42px auto 0;
 }
 
 .deadLineUl {
@@ -225,36 +226,41 @@
 }
 
 .topicsUl {
-  margin: 0px auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 34px 42px;
+  width: min(calc(100% - 96px), 1220px);
+  margin: 50px auto 0;
 }
 
 .topicsLl {
   display: flex;
-  flex: 0 0 660px;
-  margin: 62px 40px 0;
+  align-items: flex-start;
+  min-width: 0;
+  margin: 0;
 }
 
 .topicsLl .img {
-  flex: 0 0 80px;
-  height: 80px;
-  margin-right: 32px;
+  flex: 0 0 58px;
+  width: 58px;
+  height: 58px;
+  margin-right: 18px;
 }
 
 .tTitle4 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 22px;
   color: #2B79CF;
   letter-spacing: 0;
+  line-height: 1.28;
 }
 
 .tTitle5 {
-  font-size: 18px;
+  font-size: 16px;
   color: #333333;
   letter-spacing: 0;
-  margin-top: 5px;
+  line-height: 1.55;
+  margin-top: 8px;
 }
 
 
@@ -520,6 +526,105 @@
   width: 650px;
   margin-top: 20px;
 }
+
+.homePartners {
+  padding-bottom: 70px;
+}
+
+.homePartners .homePartnerTitle {
+  color: #2B79CF;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.homePartners .oTitle.homePartnerTitle {
+  margin-top: 88px;
+}
+
+.homeLogoGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  width: min(calc(100% - 48px), 1120px);
+  margin: 34px auto 0;
+}
+
+.homeLogoGridThree {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.homeLogoGridSingle {
+  grid-template-columns: minmax(0, 1fr);
+  width: min(calc(100% - 48px), 540px);
+}
+
+.homeLogoTile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  padding: 24px 28px;
+  border: 1px solid #D8E2EE;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  box-shadow: 0 8px 20px rgba(24, 68, 156, .07);
+}
+
+.homeLogoTile .img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 104px;
+  margin: 0;
+  object-fit: contain;
+}
+
+.homeSponsorTier {
+  width: min(calc(100% - 48px), 1120px);
+  margin: 38px auto 0;
+}
+
+.homeSponsorTier .oTitle1 {
+  width: auto;
+  margin: 0 0 14px;
+  padding: 0;
+  color: #333333;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: left;
+}
+
+.homeSponsorTier .oTitle1::after {
+  content: "";
+  display: block;
+  width: 52px;
+  height: 3px;
+  margin-top: 8px;
+  border-radius: 999px;
+}
+
+.homeSponsorTierPlatinum .oTitle1::after {
+  background: #7B8794;
+}
+
+.homeSponsorTierGold .oTitle1::after {
+  background: #C89D31;
+}
+
+.homeSponsorTierSilver .oTitle1::after {
+  background: #A8B0B9;
+}
+
+.homeSponsorTier .homeLogoGrid {
+  width: 100%;
+  margin-top: 0;
+}
+
 /* 适配移动端 */
 @media screen and (max-width: 750px) {
   .mobileBanner .img {
@@ -873,5 +978,99 @@
     display: inline-block;
     width: 66.667rem;
     margin-top: 20px;
+  }
+
+  .homePartnersMobile {
+    padding: 8rem 5.333rem 12rem;
+    text-align: left;
+  }
+
+  .homePartnersMobile .mOTitle {
+    margin: 7rem 0 4rem;
+    padding-left: 0;
+    color: #2B79CF;
+    font-size: 6.133rem;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .homePartnersMobile .mOTitle:first-child {
+    margin-top: 0;
+  }
+
+  .mobileLogoGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .mobileLogoGridSingle {
+    grid-template-columns: minmax(0, 1fr);
+    max-width: 58rem;
+    margin: 0 auto;
+  }
+
+  .mobileLogoTile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 18rem;
+    padding: 2.6rem;
+    border: 1px solid #D8E2EE;
+    border-radius: 1rem;
+    background: #fff;
+    box-sizing: border-box;
+    box-shadow: 0 1.2rem 2.6rem rgba(24, 68, 156, .07);
+  }
+
+  .mobileLogoTileWide {
+    grid-column: auto;
+  }
+
+  .homePartnersMobile .mobileLogoTile .img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 12rem;
+    margin: 0;
+    object-fit: contain;
+  }
+
+  .mobileSponsorTier {
+    margin-top: 4.8rem;
+  }
+
+  .mobileSponsorTier .moTitle2 {
+    margin: 0 0 2.4rem;
+    padding: 0;
+    color: #1F2937;
+    font-size: 3.6rem;
+    font-weight: 700;
+    line-height: 1.35;
+    text-align: left;
+  }
+
+  .mobileSponsorTier .moTitle2::after {
+    content: "";
+    display: block;
+    width: 8rem;
+    height: .5rem;
+    margin-top: 1.2rem;
+    border-radius: 999px;
+    background: #A8B0B9;
+  }
+
+  .mobileSponsorTierPlatinum .moTitle2::after {
+    background: #7B8794;
+  }
+
+  .mobileSponsorTierGold .moTitle2::after {
+    background: #C89D31;
+  }
+
+  .mobileSponsorTierSilver .moTitle2::after {
+    background: #A8B0B9;
   }
 }
