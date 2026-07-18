@@ -36,7 +36,7 @@
 }
 
 .dTitle {
-  max-width: 1020px;
+  max-width: none;
   margin: 18px 0 0;
   font-size: 18px;
   color: #1F2937;
@@ -309,6 +309,13 @@
   color: #1F2937;
   line-height: 1.55;
   overflow-wrap: break-word;
+}
+
+.transportationMode > div,
+.transportationStep {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
 }
 
 .transportationLabel {

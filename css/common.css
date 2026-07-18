@@ -93,6 +93,39 @@
   margin-top: 60px;
 }
 
+/* Long-form body copy */
+.pages :where(
+  p,
+  .aboutTitle3,
+  .aboutTitle4,
+  .tTitle3,
+  .tTitle5,
+  .mSTitle3,
+  .mSTitle5,
+  .conferenceOverviewText,
+  .specialIntro,
+  .special-guidance-content,
+  .specialProposalIntro,
+  .specialProposalText,
+  .sponsorFeatureText,
+  .sponsorLead,
+  .contactDescription,
+  .dTitle,
+  .bookingCardText,
+  .workshopPage .wWrap1 > div:not(.wTitle),
+  .workshopPage .wWrap2T3,
+  .workshopPage .wWrap2T2,
+  .number .content p,
+  .number .content > div:not(.fBlod):not(.speakerNameLine),
+  .guidancePanel p,
+  .specialGuidancePanel p,
+  .workshopGuidancePanel p
+) {
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+}
+
 .none {
   display: none;
 }

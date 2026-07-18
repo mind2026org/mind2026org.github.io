@@ -179,7 +179,7 @@
 
 }
 
-/* Plenary Speakers page visual refresh */
+/* Tutorial Speakers page visual refresh */
 .speakersPage .vContent {
   padding: 42px 0 76px;
   background: linear-gradient(180deg, #fff 0%, #F8FBFF 100%);
@@ -246,6 +246,15 @@
   width: min(calc(100% - 48px), 1120px);
   margin: 24px auto 0;
   justify-content: initial;
+}
+
+.speakersPage .speakersUl.none {
+  display: none;
+}
+
+.speakersPage .tutorialSpeakersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .speakersPage .speakersLl {
@@ -483,6 +492,10 @@
     grid-template-columns: 1fr;
     gap: 3rem;
     margin-top: 3rem;
+  }
+
+  .speakersPage .tutorialSpeakersGrid {
+    grid-template-columns: 1fr;
   }
 
   .speakersPage .speakersLl {

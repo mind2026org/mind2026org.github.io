@@ -44,7 +44,9 @@
   font-weight: 500;
   font-size: 18px;
   color: #333333;
-  text-align: left;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
 }
 .meetImg {
   padding: 30px;
@@ -647,7 +649,11 @@
     color: #333333;
     letter-spacing: 0;
     line-height: 4.267rem;
-    word-break: break-all;
+    word-break: normal;
+    overflow-wrap: anywhere;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
     margin-top: 4rem;
 
   }
@@ -1073,5 +1079,20 @@
 
   .mobileSponsorTierSilver .moTitle2::after {
     background: #A8B0B9;
+  }
+
+  .mobilePages .mnTitle2,
+  .mobilePages .mobileAbout > div:not(.mATitle),
+  .mobilePages .mSTitle3,
+  .mobilePages .mSTitle5,
+  .mobilePages .mAWTitle2,
+  .mobilePages .mAWTitle5,
+  .mobilePages .mSPTitle3,
+  .mobilePages .mSRTitle4 {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    word-break: normal;
+    overflow-wrap: anywhere;
   }
 }
