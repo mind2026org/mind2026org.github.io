@@ -1,57 +1,486 @@
+.vContent {
+  background: linear-gradient(180deg, #fff 0%, #F8FBFF 100%);
+  padding: 56px 0 96px;
+}
+
 .vWrap {
-  width: 73%;
+  width: min(calc(100% - 48px), 1120px);
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 0;
   text-align: left;
-  font-size: 22px;
 }
 
-.rWrap1 {
-  font-size: 26px;
-  font-weight: bold;
+.registrationOpenPanel {
+  display: grid;
+  gap: 24px;
+  margin-bottom: 34px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid #D8E2EE;
 }
 
-.rWrap1 a {
-  color:#2B79CF;
+.registrationOpenCopy {
+  width: 100%;
 }
-.rWrap2 {
-  padding: 20px 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.24) ;
+
+.registrationOpenCopy span {
+  display: block;
+  margin-bottom: 8px;
+  color: #2B79CF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-transform: uppercase;
 }
-.rTitle {
-  font-size: 26px;
-  font-weight: bold;
-  margin-bottom: 10px;
+
+.registrationOpenCopy h2 {
+  margin: 0;
+  color: #18449C;
+  font-size: 34px;
+  font-weight: 700;
+  line-height: 1.25;
 }
-.rWrap2:last-child {
-  border-bottom: none;
+
+.registrationOpenCopy p {
+  margin: 14px 0 0;
+  color: #1F2937;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
 }
-.mt20 {
-  margin-top: 20px;
+
+.registrationChannelGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
-.rWrap1Wrap {
+
+.registrationChannelCard {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 22px;
+  min-width: 0;
+  padding: 22px 24px;
+  border: 1px solid #D8E2EE;
+  border-top: 3px solid #2B79CF;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+}
+
+.registrationChannelInfo span {
+  display: block;
+  margin-bottom: 9px;
+  color: #5B6B80;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.registrationChannelInfo a {
+  color: #18449C !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+  word-break: break-word;
+}
+
+.registrationChannelInfo a:hover {
+  text-decoration: underline;
+}
+
+.registrationQr {
+  display: block;
+  width: 142px;
+  height: 142px;
+  padding: 8px;
+  border: 1px solid #E4ECF5;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.registrationSection {
+  margin-top: 48px;
+}
+
+.registrationSectionTitle {
+  position: relative;
+  margin: 0 0 20px;
+  padding-left: 18px;
+  color: #18449C;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.registrationSectionTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 5px;
+  height: 26px;
+  border-radius: 999px;
+  background: #2B79CF;
+}
+
+.registrationFeeGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.registrationFeeCard {
+  min-width: 0;
+  padding: 22px 24px 24px;
+  border: 1px solid #D8E2EE;
+  border-top: 3px solid #2B79CF;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+}
+
+.registrationFeeCardHighlight {
+  background: #fff;
+}
+
+.registrationFeeCard span {
+  display: block;
+  color: #18449C;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.registrationFeeCard ul {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 0;
+  padding: 0;
+}
+
+.registrationFeeCard li {
+  position: relative;
+  padding-left: 18px;
+  color: #1F2937;
+  font-size: 17px;
+  line-height: 1.55;
+  list-style: none;
+}
+
+.registrationFeeCard li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .72em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #2B79CF;
+}
+
+.registrationFeeCard strong {
+  color: #18449C;
+  font-weight: 700;
+}
+
+.registrationExtraFee,
+.registrationDeadlineNote {
+  margin-top: 16px;
+  padding: 16px 20px;
+  border: 1px solid #F0D28A;
+  border-left: 4px solid #D99400;
+  border-radius: 8px;
+  background: #FFF8E5;
+  color: #1F2937;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.registrationExtraFee strong,
+.registrationDeadlineNote strong {
+  color: #18449C;
+}
+
+.registrationDeadlineNote {
+  margin-top: 12px;
+}
+
+.registrationIncludeGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 0;
+  padding: 22px 24px;
+  border: 1px solid #D8E2EE;
+  border-top: 3px solid #2B79CF;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+  list-style: none;
+}
+
+.registrationIncludeGrid li {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  min-height: 0;
+  margin: 0;
+  padding: 4px 0 4px 42px;
+  color: #1F2937;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.5;
 }
-.lineThrough {
-  text-decoration: line-through;
+
+.registrationIncludeGrid li::before {
+  content: "\2713";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  transform: translateY(-50%);
+  border: 1px solid #B9CEE4;
+  border-radius: 50%;
+  background: #EEF4FB;
+  color: #2B79CF;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: center;
 }
-.c-grey {
-  color:grey;
+
+.registrationPolicyList {
+  display: grid;
+  gap: 16px;
 }
-/* 适配移动端 */
+
+.registrationPolicyItem {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 16px;
+  padding: 22px 24px;
+  border: 1px solid #D8E2EE;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(24, 68, 156, .08);
+}
+
+.registrationPolicyItem > span {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #EEF4FB;
+  color: #2B79CF;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: center;
+}
+
+.registrationPolicyItem > div {
+  color: #1F2937;
+  font-size: 17px;
+  line-height: 1.65;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+}
+
+.registrationPolicyItem strong {
+  color: #18449C;
+}
+
+.registrationPolicyItem a {
+  color: #2B79CF !important;
+  font-weight: 700;
+}
+
+.registrationPolicyItem a:hover {
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 750px) {
+  .vContent {
+    padding: 6rem 5.333rem 13.333rem;
+  }
+
   .vWrap {
-    font-size: 3.467rem;
     width: 100%;
-    padding: 0;
-    box-sizing: border-box;
   }
-  .rWrap1 {
+
+  .registrationOpenPanel {
+    gap: 3rem;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  .registrationOpenCopy span {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+
+  .registrationOpenCopy h2 {
+    font-size: 4.6rem;
+    line-height: 1.2;
+  }
+
+  .registrationOpenCopy p {
+    margin-top: 2rem;
+    font-size: 3.2rem;
+    line-height: 1.58;
+  }
+
+  .registrationChannelGrid {
+    grid-template-columns: 1fr;
+    gap: 2.4rem;
+  }
+
+  .registrationChannelCard {
+    grid-template-columns: 1fr;
+    gap: 2.6rem;
+    padding: 3rem;
+    border-top-width: .6rem;
+    border-radius: 1rem;
+  }
+
+  .registrationChannelInfo span {
+    margin-bottom: 1.2rem;
+    font-size: 2.8rem;
+  }
+
+  .registrationChannelInfo a {
+    font-size: 3.6rem;
+  }
+
+  .registrationQr {
+    width: 28rem;
+    height: 28rem;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    justify-self: center;
+  }
+
+  .registrationSection {
+    margin-top: 6rem;
+  }
+
+  .registrationSectionTitle {
+    margin-bottom: 3rem;
+    padding-left: 2.4rem;
     font-size: 4rem;
   }
-  .rTitle {
-    font-size: 4rem;
+
+  .registrationSectionTitle::before {
+    top: .6rem;
+    width: .8rem;
+    height: 3.6rem;
+  }
+
+  .registrationFeeGrid,
+  .registrationIncludeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .registrationFeeGrid {
+    gap: 2.4rem;
+  }
+
+  .registrationFeeCard {
+    padding: 3rem;
+    border-top-width: .6rem;
+    border-radius: 1rem;
+  }
+
+  .registrationFeeCard span {
+    font-size: 3.6rem;
+  }
+
+  .registrationFeeCard ul {
+    gap: 1.6rem;
+    margin-top: 2.2rem;
+  }
+
+  .registrationFeeCard li {
+    padding-left: 3rem;
+    font-size: 3.2rem;
+    line-height: 1.55;
+  }
+
+  .registrationFeeCard li::before {
+    top: .78em;
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .registrationExtraFee {
+    margin-top: 2.6rem;
+    padding: 2.4rem 3rem;
+    border-radius: 1rem;
+    font-size: 3.2rem;
+    line-height: 1.55;
+  }
+
+  .registrationDeadlineNote {
+    margin-top: 2rem;
+    padding: 2.4rem 3rem;
+    border-radius: 1rem;
+    font-size: 3.2rem;
+    line-height: 1.55;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+  }
+
+  .registrationIncludeGrid {
+    gap: 1.4rem;
+    padding: 3rem;
+    border-top-width: .6rem;
+    border-radius: 1rem;
+  }
+
+  .registrationIncludeGrid li {
+    min-height: 0;
+    padding: .4rem 0 .4rem 6.4rem;
+    font-size: 3.2rem;
+    line-height: 1.5;
+  }
+
+  .registrationIncludeGrid li::before {
+    width: 4.4rem;
+    height: 4.4rem;
+    font-size: 2.6rem;
+    line-height: 4.2rem;
+  }
+
+  .registrationIncludeGrid li:last-child {
+    grid-column: auto;
+  }
+
+  .registrationPolicyList {
+    gap: 2.4rem;
+  }
+
+  .registrationPolicyItem {
+    grid-template-columns: 5.8rem 1fr;
+    gap: 2rem;
+    padding: 3rem;
+    border-radius: 1rem;
+  }
+
+  .registrationPolicyItem > span {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    line-height: 5rem;
+  }
+
+  .registrationPolicyItem > div {
+    font-size: 3.2rem;
+    line-height: 1.55;
   }
 }
