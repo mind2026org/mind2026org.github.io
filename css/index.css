@@ -59,6 +59,142 @@
   width: 1500px;
   margin-top: 30px;
 }
+
+.wechatGroup {
+  background: #fff;
+  border-bottom: 1px solid #E1EBF5;
+  padding: 16px 0;
+}
+
+.wechatGroupInner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 116px;
+  align-items: center;
+  gap: 22px;
+  width: 64%;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wechatGroupText {
+  min-width: 0;
+}
+
+.wechatTitleToggle {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.wechatTitleToggle:focus-visible {
+  border-radius: 4px;
+  outline: 2px solid #2B79CF;
+  outline-offset: 4px;
+}
+
+.wechatNoticeToggleIcon {
+  align-items: center;
+  display: inline-flex;
+  height: 18px;
+  justify-content: center;
+  width: 18px;
+}
+
+.wechatNoticeToggleIcon::before {
+  border-bottom: 8px solid #18449C;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+
+.wechatTitleToggle:hover .wechatNoticeToggleIcon::before {
+  border-bottom-color: #2B79CF;
+}
+
+.wechatGroupTitle {
+  align-items: center;
+  color: #18449C;
+  display: inline-flex;
+  font-size: 22px;
+  gap: 10px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: left;
+}
+
+.wechatGroupCopy {
+  margin-top: 6px;
+  color: #333333;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.55;
+  text-align: justify;
+  text-justify: inter-word;
+  text-align-last: left;
+}
+
+.wechatGroupCopy p {
+  margin: 0;
+}
+
+.wechatGroupCopy p + p {
+  margin-top: 2px;
+}
+
+.wechatGroupCopyCn {
+  color: #5E6875;
+}
+
+.wechatGroupQrCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 116px;
+  height: 116px;
+  box-sizing: border-box;
+}
+
+.wechatGroupQr {
+  display: block;
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.wechatGroup.is-collapsed {
+  padding: 12px 0;
+}
+
+.wechatGroup.is-collapsed .wechatGroupInner {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.wechatGroup.is-collapsed .wechatGroupCopy,
+.wechatGroup.is-collapsed .wechatGroupQrCard {
+  display: none;
+}
+
+.wechatGroup.is-collapsed .wechatNoticeToggleIcon::before {
+  border-bottom: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #18449C;
+}
+
+.wechatGroup.is-collapsed .wechatTitleToggle:hover .wechatNoticeToggleIcon::before {
+  border-top-color: #2B79CF;
+}
+
 .about {
   background: #F1F6FA;
   box-sizing: border-box;
@@ -664,6 +800,85 @@
     box-sizing: border-box;
     padding: 8rem 5.333rem;
   }
+
+  .mobileWechatGroup {
+    background: #fff;
+    border-bottom: .267rem solid #E1EBF5;
+    padding: 3.2rem 5.333rem;
+    box-sizing: border-box;
+  }
+
+  .mobileWechatGroupInner {
+    padding: 0;
+  }
+
+  .mobileWechatGroupText {
+    min-width: 0;
+  }
+
+  .mobileWechatGroupTitle {
+    align-items: center;
+    color: #18449C;
+    display: inline-flex;
+    gap: 2rem;
+    font-size: 3.733rem;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: left;
+  }
+
+  .mobileWechatGroupCopy {
+    margin-top: 1.333rem;
+    color: #333333;
+    font-size: 2.933rem;
+    font-weight: 500;
+    line-height: 1.46;
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+  }
+
+  .mobileWechatGroupCopy p {
+    margin: 0;
+  }
+
+  .mobileWechatGroupCopy p + p {
+    margin-top: .8rem;
+  }
+
+  .mobileWechatGroupCopyCn {
+    color: #5E6875;
+  }
+
+  .mobileWechatGroupQr {
+    display: block;
+    grid-column: 1 / -1;
+    width: 26rem;
+    height: 26rem;
+    margin: 2rem auto 0;
+    object-fit: contain;
+  }
+
+  .mobileWechatGroup.is-collapsed {
+    padding: 2.667rem 5.333rem;
+  }
+
+  .mobileWechatGroup.is-collapsed .mobileWechatGroupCopy,
+  .mobileWechatGroup.is-collapsed .mobileWechatGroupQr {
+    display: none;
+  }
+
+  .mobileWechatGroup.is-collapsed .wechatNoticeToggleIcon::before {
+    border-bottom: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #18449C;
+  }
+
+  .mobileWechatGroup.is-collapsed .wechatTitleToggle:hover .wechatNoticeToggleIcon::before {
+    border-top-color: #2B79CF;
+  }
+
   .mobileAbout {
     background: #F1F6FA;
     padding: 8rem 5.333rem;

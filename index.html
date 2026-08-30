@@ -68,6 +68,23 @@
   <div class="pcBanner">
     <img src="./images/mind26_banner_new.jpg" class="img" />
   </div>
+  <div class="wechatGroup" data-wechat-notice>
+    <div class="wechatGroupInner">
+      <div class="wechatGroupText">
+        <button class="wechatTitleToggle wechatGroupTitle" type="button" data-wechat-toggle aria-expanded="true" aria-controls="wechatGroupPanel" aria-label="Hide official WeChat group details">
+          <span class="wechatNoticeToggleIcon" aria-hidden="true"></span>
+          <span>Join the Official WeChat Group</span>
+        </button>
+        <div class="wechatGroupCopy" id="wechatGroupPanel" data-wechat-panel>
+          <p>Our official WeChat group is available. Authors and all conference attendees can scan the conference WeChat and join the group. Please note "MIND 2026" when adding.</p>
+          <p class="wechatGroupCopyCn">作者和参会者可添加会务组微信加入会议官方微信群，添加时请备注 “MIND 2026”</p>
+        </div>
+      </div>
+      <div class="wechatGroupQrCard">
+        <img src="./images/code.png" alt="MIND 2026 official WeChat group QR code" class="wechatGroupQr" />
+      </div>
+    </div>
+  </div>
   <div class="news">
     <div class="nTitle1">News</div>
     <div class="newsWrap">
@@ -346,6 +363,21 @@
   </div>
   <div class="mobileBanner">
     <img src="./images/mind26_banner_mobile_new.jpg" class="img" />
+  </div>
+  <div class="mobileWechatGroup" data-wechat-notice>
+    <div class="mobileWechatGroupInner">
+      <div class="mobileWechatGroupText">
+        <button class="wechatTitleToggle mobileWechatGroupTitle" type="button" data-wechat-toggle aria-expanded="true" aria-controls="mobileWechatGroupPanel" aria-label="Hide official WeChat group details">
+          <span class="wechatNoticeToggleIcon" aria-hidden="true"></span>
+          <span>Join the Official WeChat Group</span>
+        </button>
+        <div class="mobileWechatGroupCopy" id="mobileWechatGroupPanel" data-wechat-panel>
+          <p>Our official WeChat group is available. Authors and all conference attendees can scan the conference WeChat and join the group. Please note "MIND 2026" when adding.</p>
+          <p class="mobileWechatGroupCopyCn">作者和参会者可添加会务组微信加入会议官方微信群，添加时请备注 “MIND 2026”</p>
+        </div>
+      </div>
+      <img src="./images/code.png" alt="MIND 2026 official WeChat group QR code" class="mobileWechatGroupQr" />
+    </div>
   </div>
   <div class="mobileNews">
     <div class="mnTitle1">News</div>
@@ -761,6 +793,27 @@
     })
     $('.speakerClose').click(function(){
       $('#speakersModal').removeClass('active')
+    })
+  })
+
+  document.querySelectorAll('[data-wechat-notice]').forEach(function(notice) {
+    const buttons = notice.querySelectorAll('[data-wechat-toggle]')
+
+    if (!buttons.length) {
+      return
+    }
+
+    buttons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        const collapsed = notice.classList.toggle('is-collapsed')
+        buttons.forEach(function(toggle) {
+          toggle.setAttribute('aria-expanded', String(!collapsed))
+          toggle.setAttribute(
+            'aria-label',
+            collapsed ? 'Show official WeChat group details' : 'Hide official WeChat group details'
+          )
+        })
+      })
     })
   })
 </script>
