@@ -239,6 +239,66 @@
   text-align: center;
 }
 
+.speakersPage .panelistRoster {
+  width: min(calc(100% - 48px), 1120px);
+  margin: 0 auto 34px;
+}
+
+.speakersPage .panelistRosterTitle {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  color: #18449C;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.speakersPage .panelistRosterTitle::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #D8E2EE;
+}
+
+.speakersPage .panelistRosterList {
+  border-top: 2px solid #2B79CF;
+  border-bottom: 1px solid #D8E2EE;
+}
+
+.speakersPage .panelistRosterItem {
+  display: grid;
+  grid-template-columns: minmax(210px, .7fr) minmax(0, 1.3fr);
+  gap: 28px;
+  align-items: baseline;
+  padding: 13px 16px;
+  text-align: left;
+  text-align-last: auto;
+}
+
+.speakersPage .panelistRosterItem + .panelistRosterItem {
+  border-top: 1px solid #E2E8F0;
+}
+
+.speakersPage .panelistRosterItem:nth-child(even) {
+  background: #F8FBFF;
+}
+
+.speakersPage .panelistRosterName {
+  color: #253B61;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.speakersPage .panelistRosterAffiliation {
+  color: #4B5563;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
 .speakersPage .speakersUl {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -255,6 +315,14 @@
 .speakersPage .tutorialSpeakersGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media screen and (min-width: 751px) {
+  .speakersPage .tutorialSpeakersGrid > .speakersLl:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc((100% - 24px) / 2);
+  }
 }
 
 .speakersPage .speakersLl {
@@ -482,6 +550,33 @@
     margin-top: 1.2rem;
     font-size: 3.2rem;
     text-align: center;
+  }
+
+  .speakersPage .panelistRoster {
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+
+  .speakersPage .panelistRosterTitle {
+    gap: 1.6rem;
+    margin-bottom: 2rem;
+    font-size: 3.6rem;
+  }
+
+  .speakersPage .panelistRosterItem {
+    display: block;
+    padding: 2.2rem 1.8rem;
+  }
+
+  .speakersPage .panelistRosterName,
+  .speakersPage .panelistRosterAffiliation {
+    display: block;
+    font-size: 3.2rem;
+  }
+
+  .speakersPage .panelistRosterAffiliation {
+    margin-top: .6rem;
+    line-height: 1.45;
   }
 
   .speakersPage .cTitle3 {
