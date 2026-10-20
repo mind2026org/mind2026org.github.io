@@ -63,6 +63,11 @@
   text-decoration: unset;
 }
 
+.number .content .speakerBiography em {
+  font-style: italic;
+  font-weight: inherit;
+}
+
 .number .content .fBlod {
   font-weight: bold;
   font-size: 20px;
@@ -393,15 +398,18 @@
   margin: 12px 0;
 }
 
-.keynoteSpeakersPage .number .content > .academicProfileLongDistinction {
+.keynoteSpeakersPage .number .content > .academicProfileLongDistinction,
+.eicForumPage .number .content > .academicProfileLongDistinction {
   grid-template-columns: minmax(0, 1fr);
 }
 
-.keynoteSpeakersPage .academicProfileLongDistinction .academicDetail {
+.keynoteSpeakersPage .academicProfileLongDistinction .academicDetail,
+.eicForumPage .academicProfileLongDistinction .academicDetail {
   padding: 11px 0 12px;
 }
 
-.keynoteSpeakersPage .academicProfileLongDistinction .academicDetail + .academicDetail {
+.keynoteSpeakersPage .academicProfileLongDistinction .academicDetail + .academicDetail,
+.eicForumPage .academicProfileLongDistinction .academicDetail + .academicDetail {
   padding-left: 0;
   border-top: 1px solid #D8E2EE;
   border-left: none;
