@@ -402,6 +402,11 @@
   padding-top: 18px;
 }
 
+.speakersPage .biographyOnlyGrid .speakersBtns {
+  grid-template-columns: minmax(0, 1fr);
+  width: min(160px, 100%);
+}
+
 .speakersPage .speakersBtns > * {
   min-width: 0;
   flex: none;
