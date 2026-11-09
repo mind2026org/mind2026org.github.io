@@ -721,6 +721,59 @@
   object-fit: contain;
 }
 
+/* Exclude each source image's white margins and balance the visible artwork. */
+.sponsorLogoArtwork {
+  position: relative;
+  width: min(100%, var(--logo-width));
+  aspect-ratio: var(--logo-aspect);
+  overflow: hidden;
+  flex: none;
+}
+
+.sponsorLogoArtwork > img {
+  position: absolute;
+  display: block;
+  width: var(--logo-image-width);
+  height: auto;
+  max-width: none;
+  max-height: none;
+  left: var(--logo-image-left);
+  top: var(--logo-image-top);
+}
+
+.frontopLogoArtwork {
+  /* Source 2880 x 1280; crop (308, 329, 2264, 623). */
+  --logo-width: 360px;
+  --logo-aspect: 2264 / 623;
+  --logo-image-width: 127.2085%;
+  --logo-image-left: -13.6042%;
+  --logo-image-top: -52.8090%;
+}
+
+.sivyLogoArtwork {
+  /* Source 806 x 411; crop (32, 67, 717, 302). */
+  --logo-width: 280px;
+  --logo-aspect: 717 / 302;
+  --logo-image-width: 112.4128%;
+  --logo-image-left: -4.4630%;
+  --logo-image-top: -22.1854%;
+}
+
+.jiaotongLogoArtwork {
+  /* Source 2073 x 854; crop (195, 149, 1674, 581). */
+  --logo-width: 380px;
+  --logo-aspect: 1674 / 581;
+  --logo-image-width: 123.8351%;
+  --logo-image-left: -11.6487%;
+  --logo-image-top: -25.6454%;
+}
+
+.homeLogoTile.sponsorArtworkTile,
+.mobileLogoTile.sponsorArtworkTile,
+.sponsorLogoTile.sponsorArtworkTile {
+  padding-block: 10px;
+}
+
 .homeSponsorTier {
   width: min(calc(100% - 48px), 1120px);
   margin: 38px auto 0;
@@ -1258,6 +1311,24 @@
     max-height: 12rem;
     margin: 0;
     object-fit: contain;
+  }
+
+  .frontopLogoArtwork {
+    --logo-width: 48rem;
+  }
+
+  .sivyLogoArtwork {
+    --logo-width: 36rem;
+  }
+
+  .jiaotongLogoArtwork {
+    --logo-width: 44rem;
+  }
+
+  .homeLogoTile.sponsorArtworkTile,
+  .mobileLogoTile.sponsorArtworkTile,
+  .sponsorLogoTile.sponsorArtworkTile {
+    padding-block: 1rem;
   }
 
   .mobileSponsorTier {
