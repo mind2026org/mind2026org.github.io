@@ -1,0 +1,181 @@
+.fullProgramPage {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.fullProgramPage .vContent {
+  flex: 1;
+  min-height: 0;
+}
+
+.fullProgramPage .agendaDownloadCard {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(0, 1.4fr);
+}
+
+.fullProgramPage .agendaCoverPanel {
+  display: grid;
+  place-items: center;
+  padding: 40px;
+  border-right: 1px solid #D8E2EE;
+  background: #F1F6FC;
+}
+
+.fullProgramPage .agendaCover {
+  width: min(100%, 260px);
+  margin: 0;
+}
+
+.fullProgramPage .agendaCoverImage {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  box-shadow: 0 12px 28px rgba(24, 68, 156, .2);
+}
+
+.fullProgramPage .agendaDownloadInfo {
+  align-self: center;
+  min-width: 0;
+  padding: 40px;
+}
+
+.fullProgramPage .agendaDownloadInfo h2 {
+  margin: 0;
+  color: #18449C;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.fullProgramPage .agendaConferenceDetails {
+  margin: 12px 0 0;
+  color: #5B6B80;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.fullProgramPage .agendaDescription {
+  margin: 24px 0 0;
+  color: #1F2937;
+  font-size: 18px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.fullProgramPage .agendaFileDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  margin: 24px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid #D8E2EE;
+  color: #5B6B80;
+  font-size: 14px;
+  line-height: 1.4;
+  list-style: none;
+}
+
+.fullProgramPage .agendaFileDetails li + li {
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: 1px solid #D8E2EE;
+}
+
+.fullProgramPage .agendaDownloadButton {
+  min-height: 48px;
+  margin-top: 26px;
+  padding: 13px 22px;
+  white-space: nowrap;
+}
+
+.fullProgramPage .agendaOverviewLink {
+  margin: 20px 0 0;
+  color: #5B6B80;
+  font-size: 15px;
+  line-height: 1.7;
+  text-align: left;
+}
+
+.fullProgramPage .agendaOverviewLink a {
+  color: #18449C;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.fullProgramPage .agendaOverviewLink a:hover {
+  color: #2B79CF;
+}
+
+.fullProgramPage .agendaOverviewLink a:focus-visible {
+  outline: 3px solid #2B79CF;
+  outline-offset: 4px;
+}
+
+@media screen and (max-width: 750px) {
+  .fullProgramPage .agendaDownloadCard {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fullProgramPage .agendaCoverPanel {
+    padding: 5rem;
+    border-right: 0;
+    border-bottom: 1px solid #D8E2EE;
+  }
+
+  .fullProgramPage .agendaCover {
+    width: min(100%, 48rem);
+  }
+
+  .fullProgramPage .agendaCoverImage {
+    box-shadow: 0 2rem 4rem rgba(24, 68, 156, .2);
+  }
+
+  .fullProgramPage .agendaDownloadInfo {
+    padding: 5rem;
+  }
+
+  .fullProgramPage .agendaDownloadInfo h2 {
+    font-size: 5.6rem;
+  }
+
+  .fullProgramPage .agendaConferenceDetails {
+    margin-top: 2rem;
+    font-size: 3.2rem;
+  }
+
+  .fullProgramPage .agendaDescription {
+    margin-top: 4rem;
+    font-size: 3.8rem;
+  }
+
+  .fullProgramPage .agendaFileDetails {
+    gap: 1.6rem 0;
+    margin-top: 4rem;
+    padding-top: 3.2rem;
+    font-size: 3.2rem;
+  }
+
+  .fullProgramPage .agendaFileDetails li + li {
+    margin-left: 2rem;
+    padding-left: 2rem;
+  }
+
+  .fullProgramPage .agendaDownloadButton {
+    width: 100%;
+    min-height: 44px;
+    margin-top: 4rem;
+    padding: 2.4rem 3rem;
+    font-size: 3.6rem;
+    white-space: normal;
+  }
+
+  .fullProgramPage .agendaOverviewLink {
+    margin-top: 3.2rem;
+    font-size: 3.2rem;
+  }
+}
+
