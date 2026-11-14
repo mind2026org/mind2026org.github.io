@@ -1,0 +1,204 @@
+/* Scoped to the Home photo section. */
+.homeHighlights,
+.homeHighlights * {
+  box-sizing: border-box;
+}
+
+.homeHighlights {
+  padding: 40px 0 26px;
+  color: #333;
+  background: #F1F6FA url('../images/bg2.png') center / 100% 100% no-repeat;
+}
+
+.homeHighlights [hidden] {
+  display: none !important;
+}
+
+.homeHighlightsInner {
+  width: min(90%, 1200px);
+  margin: 0 auto;
+}
+
+.homeHighlightsTitle {
+  margin: 0 0 28px;
+  padding: 0 24px;
+  color: #333;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.homeHighlightsTitle span {
+  color: #2B79CF;
+}
+
+.homeHighlightsGallery {
+  position: relative;
+}
+
+.homeHighlightsViewport {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 2 / 1;
+  border-radius: 10px;
+  background: #E9F0F8;
+  box-shadow: 0 3px 14px rgba(26, 54, 79, .1);
+  touch-action: pan-y;
+}
+
+.homeHighlightsTrack {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform .6s cubic-bezier(.22, .61, .36, 1);
+}
+
+.homeHighlightsTrack.is-resetting {
+  transition: none;
+}
+
+.homeHighlightsSlide {
+  flex: 0 0 100%;
+  min-width: 0;
+  height: 100%;
+  margin: 0;
+}
+
+.homeHighlightsSlide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Keep the conference logo inside the frame as the viewport changes. */
+  object-position: right bottom;
+}
+
+.homeHighlightsArrow,
+.homeHighlightsDot {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.homeHighlightsArrow {
+  position: absolute;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #fff;
+  background: transparent;
+  transform: translateY(-50%);
+}
+
+.homeHighlightsPrevious {
+  left: 18px;
+}
+
+.homeHighlightsNext {
+  right: 18px;
+}
+
+.homeHighlightsArrow svg {
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border-radius: 50%;
+  background: rgba(15, 32, 51, .22);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .2));
+  transition: background-color .15s ease;
+}
+
+.homeHighlightsArrow:hover svg,
+.homeHighlightsArrow:focus-visible svg {
+  background: rgba(15, 32, 51, .55);
+}
+
+.homeHighlightsControls {
+  margin-top: 4px;
+}
+
+.homeHighlightsDots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homeHighlightsDot {
+  width: 24px;
+  height: 32px;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.homeHighlightsDot::before {
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: #75899D;
+  content: "";
+  transition: width .2s ease, background-color .2s ease;
+}
+
+.homeHighlightsDot[aria-pressed="true"]::before {
+  width: 15px;
+  background: #2B79CF;
+}
+
+.homeHighlights button:focus-visible,
+.homeHighlightsGallery:focus-visible {
+  outline: 3px solid #2B79CF;
+  outline-offset: -4px;
+}
+
+.homeHighlightsStatus {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 750px) {
+  .homeHighlights {
+    padding: 7rem 0 4rem;
+    background-image: url('../images/mobile/bg1.png');
+  }
+
+  .homeHighlightsInner {
+    width: calc(100% - 28px);
+  }
+
+  .homeHighlightsTitle {
+    margin-bottom: 4rem;
+    font-size: 6.133rem;
+  }
+
+  .homeHighlightsViewport {
+    aspect-ratio: 7 / 5;
+    border-radius: 8px;
+  }
+
+  .homeHighlightsPrevious {
+    left: 2px;
+  }
+
+  .homeHighlightsNext {
+    right: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .homeHighlightsTrack,
+  .homeHighlightsArrow svg,
+  .homeHighlightsDot::before {
+    transition: none;
+  }
+}
